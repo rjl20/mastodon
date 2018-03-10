@@ -1,8 +1,10 @@
+# coding: utf-8
 # frozen_string_literal: true
 
 module SettingsHelper
   HUMAN_LOCALES = {
     en: 'English',
+    'en-OU': 'Oulipo',
     ar: 'العربية',
     bg: 'Български',
     ca: 'Català',

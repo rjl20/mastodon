@@ -69,9 +69,12 @@ class Account < ApplicationRecord
 
   # Local user validations
   validates :username, format: { with: /\A[a-z0-9_]+\z/i }, uniqueness: { scope: :domain, case_sensitive: false }, length: { maximum: 30 }, if: -> { local? && will_save_change_to_username? }
+  validates :username, format: { without: Oulipo.invalid_glyphs_regex, message: "not that fifth symbol" }, if: 'local?'
   validates_with UnreservedUsernameValidator, if: -> { local? && will_save_change_to_username? }
   validates :display_name, length: { maximum: 30 }, if: -> { local? && will_save_change_to_display_name? }
+  validates :display_name, format: { without: Oulipo.invalid_glyphs_regex, message: "not that fifth symbol" }, if: 'local?'
   validates :note, length: { maximum: 160 }, if: -> { local? && will_save_change_to_note? }
+  validates :note, format: { without: Oulipo.invalid_glyphs_regex, message: "not that fifth symbol" }, if: 'local?'
 
   # Timelines
   has_many :stream_entries, inverse_of: :account, dependent: :destroy

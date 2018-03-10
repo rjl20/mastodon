@@ -27,6 +27,7 @@ RSpec.configure do |config|
 
   config.before :suite do
     Chewy.strategy(:bypass)
+    Oulipo.set_invalid_glyphs!(/.^/)
   end
 
   config.after :suite do
