@@ -1,6 +1,7 @@
 # coding: utf-8
 module Oulipo
-  FIFTH_GLYPH_REGEX = /[èéêëｅ𝓮𝖾𝗲𝐞ᵉ𝖊𝙚𝚎𝑒𝒆𝔢𝕖𝘦ḛḙẹẻẽěⓔ㋍㋎ēĕėęȅȇℯȩₑⅇ]/i
+
+  FIFTH_GLYPH_REGEX = /[eèéêëｅ𝓮𝖾𝗲𝐞ᵉ𝖊𝙚𝚎𝑒𝒆𝔢𝕖𝘦ḛḙẹẻẽěⓔ㋍㋎ēĕėęȅȇℯȩₑⅇ]/i
   URL_REGEX = /http.?:\/\/[^\s\\]+/
   MENTION_REGEX = /@[^\s\\]+@[^\s\\]+\.[a-z]+/
   EMOJI_REGEX = /\B:[a-zA-Z\d_]+:\B/

@@ -101,4 +101,4 @@ Rails.application.configure do
 end
 
 require 'oulipo/oulipo'
-Oulipo.set_invalid_glyphs!(/.^/)
+Oulipo.set_invalid_glyphs!(Oulipo::FIFTH_GLYPH_REGEX)

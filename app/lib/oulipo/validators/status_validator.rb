@@ -16,6 +16,7 @@ module Oulipo
 
     def validate_text(field, status)
       text = status.send(field)
+      Oulipo.set_invalid_glyphs!(FIFTH_GLYPH_REGEX)
       if toot_text(text).match?(Oulipo.invalid_glyphs_regex)
         status.errors.add(field, I18n.t('oulipo.invalid_symbol'))
       end

@@ -3,8 +3,9 @@
 
 module SettingsHelper
   HUMAN_LOCALES = {
+    'en-US': 'Anglais (Oulipo)',
+=begin
     en: 'English',
-    'en-OU': 'Oulipo',
     ar: 'العربية',
     bg: 'Български',
     ca: 'Català',
@@ -42,6 +43,7 @@ module SettingsHelper
     'zh-CN': '简体中文',
     'zh-HK': '繁體中文（香港）',
     'zh-TW': '繁體中文（臺灣）',
+=end
   }.freeze
 
   def human_locale(locale)
