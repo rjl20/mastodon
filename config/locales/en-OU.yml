@@ -1,29 +1,29 @@
 ---
 en-OU:
   about:
-    about_hashtag_html: These are public toots tagged with <strong>#%{hashtag}</strong>. You can interact with them if you have an account anywhere in the fediverse.
+    about_hashtag_html: This is a group of public toots with <strong>#%{hashtag}</strong>. You can play with this if you add an account on any Mastodon instantiation.
     about_mastodon_html: Mastodon is a <em>"FOSS"</em> social sharing hub. A <em>multi-host</em> substitution for capitalistic platforms, it avoids risking a particular company monopolizing your communication. Pick a host that you trust &mdash; you can still talk with all hosts running Mastadon. Any individual can run a Mastodon instantiation and join in this <em>social hub</em> in a jiffy.
     about_this: About
     closed_registrations: Right now, nobody may join this instantiation. 
     contact: Contact
-    contact_missing: No info
+    contact_missing: No contact info
     contact_unavailable: N/A
     description_headline: What is %{domain}?
-    domain_count_after: other instantiations
+    domain_count_after: instantiations
     domain_count_before: Links found to
     extended_description_html: |
       <h3>A good place for rules</h3>
       <p>The extended description has not been set up yet.</p>
     features:
-      humane_approach_body: 'Looking at how social hubs fail again and again, Mastodon aims to do things in ways that bad actors won''t latch on to and troll with.'
-      humane_approach_title: An approach apropos for good humans
-      not_a_product_body: Mastodon is not a capitalist communication hub. No ads, no data mining, no lock-in. You will find no authority in control.
-      not_a_product_title: Humans, not products
-      real_conversation_body: With 500 symbols in any post at your disposal (minus that fifth symbol in Latin writing) and support for granular warnings, you can talk (mostly) how you want.
-      real_conversation_title: Built for communication
-      within_reach_body: Apps for iOS, Android, and misc platforms thanks to a good API allow you to talk with your pals if away from your laptop.
+      humane_approach_body: By looking at failings in prior social toos, Mastodon aims to put morality as top priority to combat misapplications of social computing.
+      humane_approach_title: A human approach
+      not_a_product_body: Mastodon is not a for-profit tool. No ads, no data mining, no DRM. Nobody is a singular authority.
+      not_a_product_title: For a human, not a product
+      real_conversation_body: With 500 symbols at your disposal and support for granular posts and tricky topic warnings, you can chat how you want to.
+      real_conversation_title: Built for actual communication
+      within_reach_body: Apps for iOS, Android, and misc platforms thanks to an API allow you to follow up with your contacts in any spot.
       within_reach_title: Always at hand
-    generic_description: '%{domain} is a lipogrammatic Mastodon for all.'
+    generic_description: '%{domain} is one instantiation in our world'
     hosted_on: Mastodon running on %{domain}
     learn_more: Additional info
     other_instances: Instantiation list
@@ -31,13 +31,13 @@ en-OU:
     status_count_after: things
     status_count_before: Who said
     user_count_after: Oulipians
-    user_count_before: Contains
+    user_count_before: Host to
     what_is_mastodon: What is Mastodon?
   accounts:
     follow: Follow
     followers: Accounts Following
     following: Following
-    media: Audiovisual things
+    media: Photos
     moved_html: "%{name} is now at %{new_profile_link}:"
     nothing_here: Sorry, nothing in this spot!
     people_followed_by: Accounts whom %{name} follows
@@ -45,7 +45,7 @@ en-OU:
     posts: Toots
     posts_with_replies: Toots and toot-backs
     remote_follow: Follow from afar
-    reserved_username: That nick is on hold
+    reserved_username: An account is using this alias
     roles:
       admin: Admin
       moderator: Mod
@@ -66,15 +66,15 @@ en-OU:
       delete: Discard
       destroyed_msg: Moderation note successfully destroyed!
     accounts:
-      are_you_sure: Do you confirm?
+      are_you_sure: Do you want to do this?
       by_domain: Domain
       confirm: Confirm
-      confirmed: Confirmation OK
+      confirmed: Thank you!
       demote: Demote
       disable: Turn off
       disable_two_factor_authentication: Turn off 2FA
       disabled: Off
-      display_name: Display name
+      display_name: Alias
       domain: Domain
       edit: Modify
       email: Mail
@@ -89,10 +89,10 @@ en-OU:
       location:
         all: All
         local: Local
-        remote: Not Local
+        remote: Afar
         title: Location
       login_status: Login status
-      media_attachments: Audiovisual attachments
+      media_attachments: Photos
       memorialize: Turn into memoriam
       moderation:
         all: All
@@ -385,18 +385,18 @@ en-OU:
     register: Sign up
     register_elsewhere: Sign up for Mastodon, but not on this host
     resend_confirmation: Mail confirmation instructions again
-    reset_password: Lost password
+    reset_password: Forgot password
     security: Security
-    set_new_password: Pick an unfamiliar password
+    set_new_password: Pick a password
   authorize_follow:
-    error: Unfortunately, there was an error looking up the remote account
+    error: Sorry, this account was not found
     follow: Follow
-    follow_request: 'You have sent a follow request to:'
-    following: 'Success! You are now following:'
+    follow_request: 'Will find out of your asking to follow:'
+    following: 'Yay! You now follow:'
     post_follow:
-      close: Or, you can just close this window.
-      return: Return to the user's profile
-      web: Go to web
+      close: Or, you can just quit this window.
+      return: 'Back to that account''s bio'
+      web: Go to Mastodon
     title: Follow %{acct}
   datetime:
     distance_in_words:
@@ -413,25 +413,25 @@ en-OU:
       x_months: "%{count}mo"
       x_seconds: "%{count}s"
   deletes:
-    bad_password_msg: Nice try, hackers! Incorrect password
-    confirm_password: Enter your current password to verify your identity
+    bad_password_msg: Good try! Wrong password
+    confirm_password: Confirm password (for ID)
     description_html: This will <strong>permanently, irreversibly</strong> remove content from your account and deactivate it. Your username will remain reserved to prevent future impersonations.
     proceed: Discard account
     success_msg: Your account was successfully deleted
     warning_html: Only deletion of content from this particular instantiation is guaranteed. Content that has been widely shared is likely to leave traces. Offline servers and servers that have unsubscribed from your updates will not update their databases.
     warning_title: Disseminated content availability
   errors:
-    '403': You don't have permission to view this page.
-    '404': The page you were looking for doesn't exist.
-    '410': The page you were looking for doesn't exist anymore.
+    '403': You may not look at this spot.
+    '404': This spot was not found.
+    '410': This isn't a spot now.
     '422':
-      content: Security verification failed. Are you blocking cookies?
-      title: Security verification failed
+      content: 'Validation didn't work. Is your configuration blocking us from storing browsing data?'
+      title: 'Validation didn''t work'
     '429': Throttled
     '500':
-      content: We're sorry, but something went wrong on our end.
-      title: This page is not correct
-    noscript_html: To use the Mastodon web application, please enable JavaScript. Alternatively, try one of the <a href="https://github.com/tootsuite/documentation/blob/master/Using-Mastodon/Apps.md">native apps</a> for Mastodon for your platform.
+      content: 'Sorry, things just don''t work right now.'
+      title: This spot is not working
+    noscript_html: For Mastodon in a window or tab, you must allow JavaScript. If you don't want to do that, try an <a href="https://github.com/tootsuite/documentation/blob/master/Using-Mastodon/Apps.md">app</a> for Mastodon for your platform.
   exports:
     archive_takeout:
       date: Date
@@ -443,14 +443,14 @@ en-OU:
     blocks: You block
     csv: CSV
     follows: You follow
-    mutes: You mute
-    storage: Media storage
+    mutes: You don't show
+    storage: Data
   followers:
     domain: Domain
     explanation_html: If you want to ensure the privacy of your statuses, you must be aware of who is following you. <strong>Your private statuses are delivered to all instantiations where you have followers</strong>. You may wish to review them, and remove followers if you do not trust your privacy to be respected by the staff or software of those instantiations.
-    followers_count: Number of followers
+    followers_count: Follow count
     lock_link: Lock your account
-    purge: Remove from followers
+    purge: Throw out from follows
     success:
       one: In the process of soft-blocking followers from one domain...
       other: In the process of soft-blocking followers from %{count} domains...
@@ -458,15 +458,15 @@ en-OU:
     unlocked_warning_html: Anyone can follow you to immediately view your private statuses. %{lock_link} to be able to review and reject followers.
     unlocked_warning_title: Your account is not locked
   generic:
-    changes_saved_msg: Changes successfully saved!
-    powered_by: powered by %{link}
-    save_changes: Save changes
+    changes_saved_msg: Your modifications took!
+    powered_by: running on %{link}
+    save_changes: Confirm modifications
     validation_errors:
-      one: Something isn't quite right yet! Please review the error below
-      other: Something isn't quite right yet! Please review %{count} errors below
+      one: Oops, that's not right! Look for a wrong thing
+      other: Oops, that's not right! Look for %{count} wrong things
   imports:
-    preface: You can import data that you have exported from another instantiation, such as a list of the people you are following or blocking.
-    success: Your data was successfully uploaded and will now be processed in due time
+    preface: You can import many kinds of data, such as all accounts you follow or block into your account on this instantiation, from data built by a download from any instantiation.
+    success: Your data is on our instantiation and is now loading
     types:
       blocking: Blocking list
       following: Following list
