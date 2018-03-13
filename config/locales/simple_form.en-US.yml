@@ -6,13 +6,13 @@ en-US:
         avatar: PNG, GIF or JPG. At most 2MB. Will be downscaled to 400x400px
         digest: Only sent after a long period of inactivity and only if you have received any personal messages in your absence
         display_name:
-          one: <span class="name-counter">1</span> character left
-          other: <span class="name-counter">%{count}</span> characters left
-        header: PNG, GIF or JPG. At most 2MB. Will be downscaled to 700x335px
-        locked: Requires you to manually approve followers
+          one: <span class="name-counter">1</span> glyphs to go
+          other: <span class="name-counter">%{count}</span> glyphs to go
+        header: PNG, GIF or JPG. At most 2MB. Will crunch to 700x335px
+        locked: You want to manually confirm follows
         note:
-          one: <span class="note-counter">1</span> character left
-          other: <span class="note-counter">%{count}</span> characters left
+          one: <span class="note-counter">1</span> glyph to go
+          other: <span class="note-counter">%{count}</span> glyphs to go
         setting_noindex: Affects your public profile and status pages
         setting_theme: Affects how Mastodon looks when you're logged in from any device.
       imports:
@@ -24,12 +24,12 @@ en-US:
     labels:
       defaults:
         avatar: Avatar
-        confirm_new_password: Confirm new password
+        confirm_new_password: Confirm this password
         confirm_password: Confirm password
-        current_password: Current password
+        current_password: Your password now
         data: Data
-        display_name: Display name
-        email: E-mail address
+        display_name: Display Alias
+        email: Mail@Domain
         expires_in: Expire after
         filtered_languages: Filtered languages
         header: Header
@@ -53,21 +53,21 @@ en-US:
         setting_unfollow_modal: Show confirmation dialog before unfollowing someone
         severity: Severity
         type: Import type
-        username: Username
-        username_or_email: Username or Email
+        username: Login Alias
+        username_or_email: Login Alias or Mail
       interactions:
         must_be_follower: Block notifications from non-followers
         must_be_following: Block notifications from people you don't follow
         must_be_following_dm: Block direct messages from people you don't follow
       notification_emails:
-        digest: Send digest e-mails
-        favourite: Send e-mail when someone favourites your status
-        follow: Send e-mail when someone follows you
-        follow_request: Send e-mail when someone requests to follow you
-        mention: Send e-mail when someone mentions you
-        reblog: Send e-mail when someone boosts your status
+        digest: Send digest mails
+        favourite: Send mail when someone favourites your status
+        follow: Send mail when someone follows you
+        follow_request: Send mail when someone requests to follow you
+        mention: Send mail when someone mentions you
+        reblog: Send mail when someone boosts your status
     'no': 'No'
     required:
       mark: "*"
-      text: required
-    'yes': 'Yes'
+      text: mandatory
+    'yes': 'Yup'

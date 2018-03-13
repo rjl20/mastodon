@@ -20,10 +20,10 @@ en-US:
       not_a_product_body: Mastodon is not a capitalist communication hub. No ads, no data mining, no lock-in. You will find no authority in control.
       not_a_product_title: Humans, not products
       real_conversation_body: With 500 symbols in any post at your disposal (minus that fifth symbol in Latin writing) and support for granular warnings, you can talk (mostly) how you want.
-      real_conversation_title: Built for communication (with a constraint)
+      real_conversation_title: Built for communication
       within_reach_body: Apps for iOS, Android, and misc platforms thanks to a good API allow you to talk with your pals if away from your laptop.
       within_reach_title: Always at hand
-    generic_description: '%{domain} is an instantiation for writing with a particular constraint'
+    generic_description: '%{domain} is a lipogrammatic Mastodon for all.'
     hosted_on: Mastodon running on %{domain}
     learn_more: Additional info
     other_instances: Instantiation list
@@ -365,7 +365,7 @@ en-US:
     warning: Be very careful with this data. Never share it with anyone!
     your_token: Your access token
   auth:
-    agreement_html: By signing up you agree to follow <a href="%{rules_path}">the rules of the instantiation</a> and <a href="%{terms_path}">our terms of service</a>.
+    agreement_html: By signing up you confirm you will follow <a href="%{rules_path}">all bylaws of this instantiation</a> including <a href="%{terms_path}">our strict bylaws</a>.
     change_password: Password
     confirm_email: Confirm mail
     delete_account: Discard account
