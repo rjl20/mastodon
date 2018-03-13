@@ -3,7 +3,7 @@
 
 module SettingsHelper
   HUMAN_LOCALES = {
-    'en-US': 'Anglais (Oulipo)',
+    'en-OU': 'Anglais (Oulipo)',
 =begin
     en: 'English',
     ar: 'العربية',
