@@ -16,7 +16,7 @@ en-OU:
       <p>The extended description has not been set up yet.</p>
     features:
       humane_approach_body: 'Looking at how social hubs fail again and again, Mastodon aims to do things in ways that bad actors won''t latch on to and troll with.'
-      humane_approach_title: A approach apropos for good humans
+      humane_approach_title: An approach apropos for good humans
       not_a_product_body: Mastodon is not a capitalist communication hub. No ads, no data mining, no lock-in. You will find no authority in control.
       not_a_product_title: Humans, not products
       real_conversation_body: With 500 symbols in any post at your disposal (minus that fifth symbol in Latin writing) and support for granular warnings, you can talk (mostly) how you want.
