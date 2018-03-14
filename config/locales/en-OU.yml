@@ -425,7 +425,7 @@ en-OU:
     '404': This spot was not found.
     '410': This isn't a spot now.
     '422':
-      content: 'Validation didn't work. Is your configuration blocking us from storing browsing data?'
+      content: 'Validation didn''t work. Is your configuration blocking us from storing browsing data?'
       title: 'Validation didn''t work'
     '429': Throttled
     '500':
