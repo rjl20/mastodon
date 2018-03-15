@@ -1,7 +1,12 @@
 ---
 en-OU:
   activerecord:
+    attributes:
+      status:
+        text: Status
     errors:
+      messages:
+        record_invalid: 'Validation did not pass: %{errors}'
       models:
         account:
           attributes:

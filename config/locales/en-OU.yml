@@ -4,9 +4,9 @@ en-OU:
     about_hashtag_html: This is a group of public toots with <strong>#%{hashtag}</strong>. You can play with this if you add an account on any Mastodon instantiation.
     about_mastodon_html: Mastodon is a <em>"FOSS"</em> social sharing hub. A <em>multi-host</em> substitution for capitalistic platforms, it avoids risking a particular company monopolizing your communication. Pick a host that you trust &mdash; you can still talk with all hosts running Mastadon. Any individual can run a Mastodon instantiation and join in this <em>social hub</em> in a jiffy.
     about_this: About
-    closed_registrations: Right now, nobody may join this instantiation. 
+    closed_registrations: Right now, nobody may join this instantiation.
     contact: Contact
-    contact_missing: No contact info
+    contact_missing: No contact
     contact_unavailable: N/A
     description_headline: What is %{domain}?
     domain_count_after: instantiations
@@ -21,10 +21,10 @@ en-OU:
       not_a_product_title: For a human, not a product
       real_conversation_body: With 500 symbols at your disposal and support for granular posts and tricky topic warnings, you can chat how you want to.
       real_conversation_title: Built for actual communication
-      within_reach_body: Apps for iOS, Android, and misc platforms thanks to an API allow you to follow up with your contacts in any spot.
-      within_reach_title: Always at hand
-    generic_description: '%{domain} is one instantiation in our world'
-    hosted_on: Mastodon running on %{domain}
+      within_reach_body: Apps for iOS, Android, and various platforms thanks to an API allow you to follow up with your contacts in any spot.
+      within_reach_title: Always in proximity
+    generic_description: "%{domain} is one instantiation in our world"
+    hosted_on: Mastodon on %{domain}
     learn_more: Additional info
     other_instances: Instantiation list
     source_code: Github
@@ -35,7 +35,7 @@ en-OU:
     what_is_mastodon: What is Mastodon?
   accounts:
     follow: Follow
-    followers: Accounts Following
+    followers: Accounts following
     following: Following
     media: Photos
     moved_html: "%{name} is now at %{new_profile_link}:"
@@ -43,20 +43,13 @@ en-OU:
     people_followed_by: Accounts whom %{name} follows
     people_who_follow: Accounts who follow %{name}
     posts: Toots
-    posts_with_replies: Toots and toot-backs
+    posts_with_replies: Toots and replies
     remote_follow: Follow from afar
     reserved_username: An account is using this alias
     roles:
       admin: Admin
       moderator: Mod
     unfollow: Unfollow
-  activerecord:
-    attributes:
-      status:
-         text: Status
-    errors:
-      messages:
-        record_invalid: "Validation did not pass: %{errors}"
   admin:
     account_moderation_notes:
       account: Moderator
@@ -73,16 +66,16 @@ en-OU:
       demote: Demote
       disable: Turn off
       disable_two_factor_authentication: Turn off 2FA
-      disabled: Off
+      disabled: false
       display_name: Alias
       domain: Domain
       edit: Modify
       email: Mail
       enable: Turn on
-      enabled: On
-      feed_url: Feed URL
-      followers: Accounts following
-      followers_url: URL for accounts following
+      enabled: true
+      feed_url: RSS URL
+      followers: Accounts Following
+      followers_url: Accounts Following URL
       follows: Follows
       inbox_url: Inbox URL
       ip: IP
@@ -105,7 +98,7 @@ en-OU:
       not_subscribed: Not subscribed
       order:
         alphabetic: A-Z
-        most_recent: Proximity to Now
+        most_recent: Most now-ish
         title: Sort
       outbox_url: Outbox URL
       perform_full_suspension: Perform full suspension
@@ -142,13 +135,13 @@ en-OU:
       web: Web
     action_logs:
       actions:
-        confirm_user: "%{name} confirmed mail address of user %{target}"
+        confirm_user: "%{name} confirmed e-mail address of user %{target}"
         create_custom_emoji: "%{name} uploaded new emoji %{target}"
         create_domain_block: "%{name} blocked domain %{target}"
-        create_email_domain_block: "%{name} blacklisted mail domain %{target}"
+        create_email_domain_block: "%{name} blacklisted e-mail domain %{target}"
         demote_user: "%{name} demoted user %{target}"
         destroy_domain_block: "%{name} unblocked domain %{target}"
-        destroy_email_domain_block: "%{name} whitelisted mail domain %{target}"
+        destroy_email_domain_block: "%{name} whitelisted e-mail domain %{target}"
         destroy_status: "%{name} removed status by %{target}"
         disable_2fa_user: "%{name} disabled two factor requirement for user %{target}"
         disable_custom_emoji: "%{name} disabled emoji %{target}"
@@ -192,7 +185,7 @@ en-OU:
       updated_msg: Emoji successfully updated!
       upload: Upload
     domain_blocks:
-      add_new: Add
+      add_new: Add new
       created_msg: Domain block is now being processed
       destroyed_msg: Domain block has been undone
       domain: Domain
@@ -224,15 +217,15 @@ en-OU:
       title: Domain blocks
       undo: Undo
     email_domain_blocks:
-      add_new: Add
-      created_msg: Successfully added mail domain to blacklist
+      add_new: Add new
+      created_msg: Successfully added e-mail domain to blacklist
       delete: Discard
-      destroyed_msg: Success deleting mail domain from blacklist
+      destroyed_msg: Successfully deleted e-mail domain from blacklist
       domain: Domain
       new:
         create: Add domain
-        title: Add to mail blacklist
-      title: Mail blacklist
+        title: New e-mail blacklist entry
+      title: E-mail blacklist
     instances:
       account_count: Known accounts
       domain_name: Domain
@@ -278,14 +271,14 @@ en-OU:
         desc_html: Separate multiple usernames by comma. Only local and unlocked accounts will work. Default when empty is all local admins.
         title: Default follows for new users
       contact_information:
-        email: Business mail
+        email: Work mail
         username: Contact username
       hero:
-        desc_html: Displayed on the frontpage. At least 600x100px recommended. When not set, falls back to instantiation thumbnail
+        desc_html: Displayed on the frontpage. At least 600x100px recommended. When not set, falls back to instance thumbnail
         title: Hero image
       peers_api_enabled:
-        desc_html: Domain names this instantiation has encountered in the fediverse
-        title: Publish list of discovered instantiations
+        desc_html: Domain names this instance has encountered in the fediverse
+        title: Publish list of discovered instances
       registrations:
         closed_message:
           desc_html: Displayed on frontpage when registrations are closed. You can use HTML tags
@@ -307,17 +300,17 @@ en-OU:
         title: Show staff badge
       site_description:
         desc_html: Introductory paragraph on the frontpage and in meta tags. You can use HTML tags, in particular <code>&lt;a&gt;</code> and <code>&lt;em&gt;</code>.
-        title: Instantiation description
+        title: Instance description
       site_description_extended:
-        desc_html: A good place for your code of conduct, rules, guidelines and other things that set your instantiation apart. You can use HTML tags
+        desc_html: A good place for your code of conduct, rules, guidelines and other things that set your instance apart. You can use HTML tags
         title: Custom extended information
       site_terms:
         desc_html: You can write your own privacy policy, terms of service or other legalese. You can use HTML tags
         title: Custom terms of service
-      site_title: Instantiation name
+      site_title: Instance name
       thumbnail:
         desc_html: Used for previews via OpenGraph and API. 1200x630px recommended
-        title: Instantiation thumbnail
+        title: Instance thumbnail
       timeline_preview:
         desc_html: Display public timeline on landing page
         title: Timeline preview
@@ -350,38 +343,35 @@ en-OU:
       body: "%{reporter} has reported %{target}"
       subject: New report for %{instance} (#%{id})
   application_mailer:
-    notification_preferences: Change mail preferences
+    notification_preferences: Modify mail options
     salutation: "%{name},"
-    settings: 'Change mail preferences: %{link}'
-    view: 'View:'
-    view_profile: View Profile
-    view_status: View status
+    settings: 'Modify mail configuration: %{link}'
+    view: 'Look at:'
+    view_profile: Look at Account
+    view_status: Look at Post
   applications:
-    created: Application successfully created
+    created: Application addition took
     destroyed: Application successfully deleted
-    invalid_url: The provided URL is invalid
-    regenerate_token: Regenerate access token
+    invalid_url: That URL is invalid
+    regenerate_token: Add access token
     token_regenerated: Access token successfully regenerated
     warning: Be very careful with this data. Never share it with anyone!
     your_token: Your access token
   auth:
-    agreement_html: By signing up you confirm you will follow <a href="%{rules_path}">all bylaws of this instantiation</a> including <a href="%{terms_path}">our strict bylaws</a>.
-    change_password: Password
+    agreement_html: By signing up you must follow <a href="%{rules_path}">our social contract</a> and <a href="%{terms_path}">our privacy policy</a>.
+    change_password: Authorization
     confirm_email: Confirm mail
-    delete_account: Discard account
-    delete_account_html: If you wish to delete your account, you can <a href="%{path}">proceed here</a>. You will be asked for confirmation.
-    didnt_get_confirmation: Didn't receive confirmation instructions?
+    delete_account: Kill account
+    delete_account_html: If you wish to kill your account, you can <a href="%{path}">click this spot</a>. You must confirm.
+    didnt_get_confirmation: Can't find confirmation instructions?
     forgot_password: Forgot your password?
-    invalid_reset_password_token: Password reset token is invalid or expired. Please request a new one.
+    invalid_reset_password_token: Invalid or old URL. Try asking for a link again.
     login: Log in
     logout: Logout
-    migrate_account: Move to a different account
-    migrate_account_html: If you wish to redirect this account to a different one, you can <a href="%{path}">configure it here</a>.
+    migrate_account: Account migration
+    migrate_account_html: If you want this account to point to an account that is not this account, you can <a href="%{path}">do that by clicking this spot</a>.
     or: or
     or_log_in_with: Or log in with
-    providers:
-      cas: CAS
-      saml: SAML
     register: Sign up
     register_elsewhere: Sign up for Mastodon, but not on this host
     resend_confirmation: Mail confirmation instructions again
@@ -395,7 +385,7 @@ en-OU:
     following: 'Yay! You now follow:'
     post_follow:
       close: Or, you can just quit this window.
-      return: 'Back to that account''s bio'
+      return: Back to that account's bio
       web: Go to Mastodon
     title: Follow %{acct}
   datetime:
@@ -414,24 +404,24 @@ en-OU:
       x_seconds: "%{count}s"
   deletes:
     bad_password_msg: Good try! Wrong password
-    confirm_password: Confirm password (for ID)
+    confirm_password: Confirm password
     description_html: This will <strong>permanently, irreversibly</strong> remove content from your account and deactivate it. Your username will remain reserved to prevent future impersonations.
     proceed: Discard account
     success_msg: Your account was successfully deleted
-    warning_html: Only deletion of content from this particular instantiation is guaranteed. Content that has been widely shared is likely to leave traces. Offline servers and servers that have unsubscribed from your updates will not update their databases.
+    warning_html: Only deletion of content from this particular instance is guaranteed. Content that has been widely shared is likely to leave traces. Offline servers and servers that have unsubscribed from your updates will not update their databases.
     warning_title: Disseminated content availability
   errors:
     '403': You may not look at this spot.
-    '404': This spot was not found.
+    '404': The page you were looking for doesn't exist.
     '410': This isn't a spot now.
     '422':
-      content: 'Validation didn''t work. Is your configuration blocking us from storing browsing data?'
-      title: 'Validation didn''t work'
-    '429': Throttled
+      content: Validation didn't work. Is your configuration blocking us from storing browsing data?
+      title: Validation didn't work
+    '429': Throttling traffic
     '500':
-      content: 'Sorry, things just don''t work right now.'
+      content: Sorry, things just don't work right now.
       title: This spot is not working
-    noscript_html: For Mastodon in a window or tab, you must allow JavaScript. If you don't want to do that, try an <a href="https://github.com/tootsuite/documentation/blob/master/Using-Mastodon/Apps.md">app</a> for Mastodon for your platform.
+    noscript_html: To use Mastodon, you must allow JavaScript. If you don't want to do that, try an <a href="https://github.com/tootsuite/documentation/blob/master/Using-Mastodon/Apps.md">app</a> for Mastodon for your platform.
   exports:
     archive_takeout:
       date: Date
@@ -447,28 +437,28 @@ en-OU:
     storage: Data
   followers:
     domain: Domain
-    explanation_html: If you want to ensure the privacy of your statuses, you must be aware of who is following you. <strong>Your private statuses are delivered to all instantiations where you have followers</strong>. You may wish to review them, and remove followers if you do not trust your privacy to be respected by the staff or software of those instantiations.
+    explanation_html: If you want privacy for your posts, you must know about who is following you. <strong>Your privy posts go to any instantiation with folks who follow you on it</strong>. You may wish to look a that list, and throw out following accounts if you do not trust your privacy with staff or programming of that instantiation.
     followers_count: Follow count
     lock_link: Lock your account
     purge: Throw out from follows
     success:
-      one: In the process of soft-blocking followers from one domain...
-      other: In the process of soft-blocking followers from %{count} domains...
-    true_privacy_html: Please mind that <strong>true privacy can only be achieved with end-to-end encryption</strong>.
-    unlocked_warning_html: Anyone can follow you to immediately view your private statuses. %{lock_link} to be able to review and reject followers.
-    unlocked_warning_title: Your account is not locked
+      one: As part of soft-blocking accounts from a domain...
+      other: As part of soft-blocking accounts from %{count} domains...
+    true_privacy_html: Mind that <strong>actual privacy can only work with cryptography</strong>.
+    unlocked_warning_html: Anybody can follow you to look at your privy posts. %{lock_link} for approval of who follows you.
+    unlocked_warning_title: Your account is not on lockdown
   generic:
     changes_saved_msg: Your modifications took!
-    powered_by: running on %{link}
-    save_changes: Confirm modifications
+    powered_by: run by %{link}
+    save_changes: Confirm
     validation_errors:
-      one: Oops, that's not right! Look for a wrong thing
-      other: Oops, that's not right! Look for %{count} wrong things
+      one: Oops, that's not right! Look at this
+      other: Oops, that's not right! Look at this
   imports:
     preface: You can import many kinds of data, such as all accounts you follow or block into your account on this instantiation, from data built by a download from any instantiation.
     success: Your data is on our instantiation and is now loading
     types:
-      blocking: Blocking list
+      blocking: Block list
       following: Following list
       muting: Muting list
     upload: Upload
@@ -488,20 +478,20 @@ en-OU:
       one: 1 use
       other: "%{count} uses"
     max_uses_prompt: No limit
-    prompt: Generate and share links with others to grant access to this instantiation
+    prompt: Generate and share links with others to grant access to this instance
     table:
       expires_at: Expires
       uses: Uses
     title: Invite people
-  landing_strip_html: "<strong>%{name}</strong> is a user on %{link_to_root_path}. You can follow them or interact with them if you have an account anywhere in the fediverse."
+  landing_strip_html: <strong>%{name}</strong> is on <strong>%{domain}</strong>. You can follow or talk with this account if you own an account on any instantiation. If you don't, you can <a href="%{sign_up_path}">sign up</a>.
   landing_strip_signup_html: If you don't, you can <a href="%{sign_up_path}">sign up here</a>.
   lists:
     errors:
       limit: You have reached the maximum amount of lists
   media_attachments:
     validations:
-      images_and_video: Cannot attach a video to a status that already contains images
-      too_many: Cannot attach more than 4 files
+      images_and_video: Cannot attach a vid to a status that contains photos
+      too_many: You may only attach up to 4 things
   migrations:
     acct: username@domain of the new account
     currently_redirecting: 'Your profile is set to redirect to:'
@@ -511,19 +501,19 @@ en-OU:
     title: Moderation
   notification_mailer:
     digest:
-      action: View all notifications
-      body: Here is a brief summary of the messages you missed since your last visit on %{since}
-      mention: "You got a tag in %{name}'s status:"
+      action: Look at all notifications
+      body: This is a summary of activity you did not catch on %{instance} following your last visit on %{since}
+      mention: 'You got a tag by %{name} in:'
       new_followers_summary:
-        one: Also, you have acquired one new follower while being away! Yay!
-        other: Also, you have acquired %{count} new followers while being away! Amazing!
+        one: You got a follow! Yay!
+        other: You got %{count} follows! Amazing!
       subject:
-        one: "1 new notification since your last visit \U0001F418"
-        other: "%{count} new notifications since your last visit \U0001F418"
+        one: "1 notification following your last visit \U0001F418"
+        other: "%{count} notifications following your last visit \U0001F418"
       title: In your absence…
     favourite:
-      body: 'Your status was favourited by %{name}:'
-      subject: "%{name} favourited your status"
+      body: 'Your status got a star from %{name}:'
+      subject: "%{name} put a star on your status"
       title: New favourite
     follow:
       body: "%{name} is now following you!"
@@ -531,17 +521,17 @@ en-OU:
       title: New follower
     follow_request:
       action: Manage follow requests
-      body: "%{name} has requested to follow you"
-      subject: 'Pending follower: %{name}'
+      body: "%{name} wants to follow you"
+      subject: 'Follow awaiting confirmation: %{name}'
       title: New follow request
     mention:
       action: Reply
-      body: "You got a tag in %{name}'s status:"
-      subject: Tag from %{name}
+      body: 'You got a tag by %{name} in:'
+      subject: You got a tag from %{name}
       title: New mention
     reblog:
-      body: 'Your status was boosted by %{name}:'
-      subject: "%{name} boosted your status"
+      body: 'Your status got a boost from %{name}:'
+      subject: Your status got a boost from %{name}
       title: New boost
   number:
     human:
@@ -555,18 +545,16 @@ en-OU:
           trillion: T
           unit: ''
   oulipo:
-    invalid_symbol: has an invalid symbol
-  pagination:	     
-    newer: Newer
-    next: Onward
-    older: Older
+    invalid_symbol: Invalid symbol
+  pagination:
+    next: Forward
     prev: Prev
     truncate: "&hellip;"
   preferences:
-    languages: Languages
-    other: Other
+    languages: Localizations
+    other: Additional
     publishing: Publishing
-    web: Web
+    web: Display
   push_notifications:
     favourite:
       title: "%{name} favourited your status"
@@ -576,19 +564,19 @@ en-OU:
       title: "%{count} notifications"
     mention:
       action_boost: Boost
-      action_expand: Show more
-      action_favourite: Favourite
+      action_expand: Show full
+      action_favourite: Star
       title: "%{name} mentioned you"
     reblog:
       title: "%{name} boosted your status"
   remote_follow:
-    acct: Enter your username@domain you want to follow from
-    missing_resource: Could not find the required redirect URL for your account
-    proceed: Proceed to follow
-    prompt: 'You are going to follow:'
+    acct: Add your alias@domain you want to follow from
+    missing_resource: Could not find mandatory URL for your account
+    proceed: Go to follow
+    prompt: 'Do you want to follow:'
   sessions:
     activity: Last activity
-    browser: Browser
+    browser: Browsing Tool
     browsers:
       alipay: Alipay
       blackberry: Blackberry
@@ -607,9 +595,9 @@ en-OU:
       safari: Safari
       uc_browser: UCBrowser
       weibo: Weibo
-    current_session: Current session
+    current_session: This login
     description: "%{browser} on %{platform}"
-    explanation: These are the web browsers currently logged in to your Mastodon account.
+    explanation: This is a list of your accounts login activity right now.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -624,46 +612,46 @@ en-OU:
       windows: Windows
       windows_mobile: Windows Mobile
       windows_phone: Windows Phone
-    revoke: Revoke
-    revoke_success: Session successfully revoked
-    title: Sessions
+    revoke: Discard
+    revoke_success: Login discard took
+    title: Activity
   settings:
-    authorized_apps: Authorized apps
+    authorized_apps: Apps with authorization
     back: Back to Mastodon
     delete: Account deletion
-    development: Development
-    edit_profile: Edit profile
-    export: Data export
-    followers: Authorized followers
+    development: Cosing
+    edit_profile: Modify bio
+    export: Data copying
+    followers: Accounts following
     import: Import
     migrate: Account migration
     notifications: Notifications
-    preferences: Preferences
-    settings: Settings
+    preferences: Options
+    settings: Configuration
     two_factor_authentication: Two-factor Auth
     your_apps: Your applications
   statuses:
-    open_in_web: Open in web
-    over_character_limit: character limit of %{max} exceeded
+    open_in_web: Go to http location
+    over_character_limit: past symbol limit of %{max}
     pin_errors:
       limit: You have already pinned the maximum number of toots
       ownership: Someone else's toot cannot be pinned
       private: Non-public toot cannot be pinned
       reblog: A boost cannot be pinned
-    show_more: Show more
+    show_more: Show additional
     title: '%{name}: "%{quote}"'
     visibilities:
-      private: Followers-only
-      private_long: Only show to followers
+      private: Accounts following-only
+      private_long: Only show to accounts who follow you
       public: Public
-      public_long: Everyone can see
-      unlisted: Unlisted
-      unlisted_long: Everyone can see, but not listed on public timelines
+      public_long: Anybody can look
+      unlisted: No listing
+      unlisted_long: Public, but will not display in a public activity list
   stream_entries:
     click_to_show: Click to show
     pinned: Pinned toot
-    reblogged: boosted
-    sensitive_content: Sensitive content
+    reblogged: boosts
+    sensitive_content: Tricky
   terms:
     body_html: |
       <h2>Privacy Policy</h2>
@@ -672,7 +660,7 @@ en-OU:
 
       <p>We collect information from you when you register on our site and gather data when you participate in the forum by reading, writing, and evaluating the content shared here.</p>
 
-      <p>When registering on our site, you may be asked to enter your name and mail address. You may, however, visit our site without registering. Your mail address will be verified by a mail containing a unique link. If that link is visited, we know that you control the mail address.</p>
+      <p>When registering on our site, you may be asked to enter your name and e-mail address. You may, however, visit our site without registering. Your e-mail address will be verified by an email containing a unique link. If that link is visited, we know that you control the e-mail address.</p>
 
       <p>When registered and posting, we record the IP address that the post originated from. We also may retain server logs which include the IP address of every request to our server.</p>
 
@@ -684,7 +672,7 @@ en-OU:
         <li>To personalize your experience &mdash; your information helps us to better respond to your individual needs.</li>
         <li>To improve our site &mdash; we continually strive to improve our site offerings based on the information and feedback we receive from you.</li>
         <li>To improve customer service &mdash; your information helps us to more effectively respond to your customer service requests and support needs.</li>
-        <li>To send periodic mails &mdash; The mail address you provide may be used to send you information, notifications that you request about changes to topics or in response to your user name, respond to inquiries, and/or other requests or questions.</li>
+        <li>To send periodic emails &mdash; The email address you provide may be used to send you information, notifications that you request about changes to topics or in response to your user name, respond to inquiries, and/or other requests or questions.</li>
       </ul>
 
       <h3 id="protect">How do we protect your information?</h3>
@@ -740,14 +728,14 @@ en-OU:
     formats:
       default: "%b %d, %Y, %H:%M"
   two_factor_authentication:
-    code_hint: Enter the code generated by your authenticator app to confirm
-    description_html: If you enable <strong>two-factor authentication</strong>, logging in will require you to be in possession of your phone, which will generate tokens for you to enter.
-    disable: Disable
-    enable: Enable
+    code_hint: Submit digits that your auth app displays to confirm
+    description_html: If you allow <strong>two-factor login</strong>, a string of digits will go to you via sms or an auth app, which you will add to your login form.
+    disable: Disallow
+    enable: Allow
     enabled: Two-factor authentication is enabled
-    enabled_success: Two-factor authentication successfully enabled
-    generate_recovery_codes: Generate recovery codes
-    instructions_html: "<strong>Scan this QR code into Google Authenticator or a similiar TOTP app on your phone</strong>. From now on, that app will generate tokens that you will have to enter when logging in."
+    enabled_success: Your two-factor login took!
+    generate_recovery_codes: Build backup strings
+    instructions_html: "<strong>Scan this QR visual into an app</strong>. From now on, that app will know your string of digits for login."
     lost_recovery_codes: Recovery codes allow you to regain access to your account if you lose your phone. If you've lost your recovery codes, you can regenerate them here. Your old recovery codes will be invalidated.
     manual_instructions: 'If you can''t scan this QR visual and must add it manually, this is a plain string of it:'
     recovery_codes: Backup recovery codes
@@ -766,10 +754,10 @@ en-OU:
       explanation: Here are some tips to get you started
       final_action: Start posting
       final_step: 'Start posting! Even without followers your public messages may be seen by others, for example on the local timeline and in hashtags. You may want to introduce yourself on the #introductions hashtag.'
-      full_handle: Your full handle
-      full_handle_hint: This is what you would tell your friends so they can message or follow you from another instantiation.
+      full_handle: Your full alias
+      full_handle_hint: This is what you would tell your friends so they can message or follow you from another instance.
       review_preferences_action: Change preferences
-      review_preferences_step: Make sure to set your preferences, such as which mails you'd like to receive, or what privacy level you’d like your posts to default to. If you don’t have motion sickness, you could choose to enable GIF autoplay.
+      review_preferences_step: Make sure to set your preferences, such as which emails you'd like to receive, or what privacy level you’d like your posts to default to. If you don’t have motion sickness, you could choose to enable GIF autoplay.
       subject: Welcome to Mastodon
       tip_bridge_html: If you are coming from Twitter, you can find your friends on Mastodon by using the <a href="%{bridge_url}">bridge app</a>. It only works if they also used the bridge app though!
       tip_federated_timeline: The federated timeline is a firehose view of the Mastodon network. But it only includes people your neighbours are subscribed to, so it's not complete.
@@ -779,7 +767,7 @@ en-OU:
       tips: Tips
       title: Welcome aboard, %{name}!
   users:
-    invalid_email: The mail address is invalid
+    invalid_email: That mail is invalid
     invalid_otp_token: Invalid two-factor digits
-    seamless_external_login: You are logged in via an external service, so password and mail settings are not available.
+    seamless_external_login: You are logged in via an external service, so password and e-mail settings are not available.
     signed_in_as: 'Signed in as:'
