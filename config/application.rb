@@ -16,6 +16,8 @@ require_relative '../lib/devise/ldap_authenticatable'
 
 Dotenv::Railtie.load
 
+Bundler.require(:pam_authentication) if ENV['PAM_ENABLED'] == 'true'
+
 require_relative '../lib/mastodon/redis_config'
 
 module Mastodon
@@ -77,9 +79,7 @@ module Mastodon
     ]
 
     config.i18n.default_locale = ENV['DEFAULT_LOCALE']&.to_sym
-    if config.i18n.available_locales.include?(config.i18n.default_locale)
-      config.i18n.fallbacks = [:'en-OU']
-    else
+    unless config.i18n.available_locales.include?(config.i18n.default_locale)
       config.i18n.default_locale = :'en-OU'
     end
 
