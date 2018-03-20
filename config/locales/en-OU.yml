@@ -631,6 +631,15 @@ en-OU:
     two_factor_authentication: Two-factor Auth
     your_apps: Your applications
   statuses:
+    attached:
+      description: 'Attached: %{attached}'
+      image:
+        one: "%{count} image"
+        other: "%{count} images"
+      video:
+        one: "%{count} video"
+        other: "%{count} videos"
+    content_warning: 'Content warning: %{warning}'
     open_in_web: Go to http location
     over_character_limit: past symbol limit of %{max}
     pin_errors:

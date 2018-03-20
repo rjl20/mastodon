@@ -70,4 +70,4 @@ en-OU:
     required:
       mark: "*"
       text: mandatory
-    'yes': 'Yup'
+    'yes': Yup
