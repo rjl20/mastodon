@@ -484,7 +484,7 @@ en-OU:
       uses: Uses
     title: Invite people
   landing_strip_html: <strong>%{name}</strong> is on <strong>%{link_to_root_path}</strong>. You can follow or talk with this account if you own an account on any instantiation. If you don't, you can <a href="%{sign_up_path}">sign up</a>.
-  landing_strip_signup_html: If you don't, you can <a href="%{sign_up_path}">sign up here</a>.
+  landing_strip_signup_html: If you don't, you can <a href="%{sign_up_path}">sign up</a>.
   lists:
     errors:
       limit: You have reached the maximum amount of lists
