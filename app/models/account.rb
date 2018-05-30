@@ -71,13 +71,13 @@ class Account < ApplicationRecord
 
   # Local user validations
   validates :username, format: { with: /\A#{USERNAME_RE}\z/i }, length: { maximum: 30 }, if: -> { local? && will_save_change_to_username? }
-  validates :username, format: { without: Oulipo.invalid_glyphs_regex, message: "not that fifth symbol" }, if: 'local?'
+  validates :username, format: { without: Oulipo.invalid_glyphs_regex, message: "not that fifth symbol" }, if: -> { local? }
   validates_with UniqueUsernameValidator, if: -> { local? && will_save_change_to_username? }
   validates_with UnreservedUsernameValidator, if: -> { local? && will_save_change_to_username? }
   validates :display_name, length: { maximum: 30 }, if: -> { local? && will_save_change_to_display_name? }
-  validates :display_name, format: { without: Oulipo.invalid_glyphs_regex, message: "not that fifth symbol" }, if: 'local?'
+  validates :display_name, format: { without: Oulipo.invalid_glyphs_regex, message: "not that fifth symbol" }, if: -> { local? }
   validates :note, length: { maximum: 160 }, if: -> { local? && will_save_change_to_note? }
-  validates :note, format: { without: Oulipo.invalid_glyphs_regex, message: "not that fifth symbol" }, if: 'local?'
+  validates :note, format: { without: Oulipo.invalid_glyphs_regex, message: "not that fifth symbol" }, if: -> { local? }
   validates :fields, length: { maximum: 4 }, if: -> { local? && will_save_change_to_fields? }
 
   # Timelines
