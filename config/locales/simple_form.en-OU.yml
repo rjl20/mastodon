@@ -5,7 +5,7 @@ en-OU:
       defaults:
         avatar: PNG, GIF or JPG. At most 2MB. Will crunch down to 400x400px
         bot: This account mainly acts automatically and might lack monitoring
-        digest: Only if you lack activity for many days and only if you got DMs in such days
+        digest: Only if you lack activity for many days and only if you got DMs or @s in such days
         display_name:
           one: <span class="name-counter">1</span> glyphs to go
           other: <span class="name-counter">%{count}</span> glyphs to go
@@ -21,7 +21,7 @@ en-OU:
       imports:
         data: CSV doc from an alt Mastodon
       sessions:
-        otp: 'Put in a two-factor coding from by an app or pick a backup coding:'
+        otp: 'Put in two-factor digits from an app or pick from your backup digits:'
       user:
         filtered_languages: Idioms you want off of any public activity lists
     labels:
@@ -47,7 +47,7 @@ en-OU:
         max_uses: Max amount of using
         new_password: Password from now on
         note: Bio
-        otp_attempt: Two-factor coding
+        otp_attempt: Two-factor digits
         password: Password
         setting_auto_play_gif: Auto-play GIFs
         setting_boost_modal: Show confirmation dialog prior to boosting
