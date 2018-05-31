@@ -71,11 +71,11 @@ en-OU:
         must_be_following_dm: Block DMs from folks you don't follow
       notification_emails:
         digest: Bundling of mail
-        favourite: Mail if an account stars your status
-        follow: Mail if an account follows you
-        follow_request: Mail if an account asks to follow you
-        mention: Mail if an account says your alias
-        reblog: Mail if an account boosts your status
+        favourite: Mail if anybody stars your status
+        follow: Mail if anybody follows you
+        follow_request: Mail if anybody asks to follow you
+        mention: Mail if anybody says your alias
+        reblog: Mail if anybody boosts your status
     'no': 'No'
     required:
       mark: "*"
