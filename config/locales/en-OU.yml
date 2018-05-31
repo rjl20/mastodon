@@ -4,6 +4,7 @@ en-OU:
     about_hashtag_html: This is a group of public toots with <strong>#%{hashtag}</strong>. You can play with this if you add an account on any Mastodon instantiation.
     about_mastodon_html: Mastodon is a <em>"FOSS"</em> social sharing hub. A <em>multi-host</em> substitution for capitalistic platforms, it avoids risking a particular company monopolizing your communication. Pick a host that you trust &mdash; you can still talk with all hosts running Mastadon. Any individual can run a Mastodon instantiation and join in this <em>social hub</em> in a jiffy.
     about_this: About
+    administered_by: 'Administrator(s):'
     closed_registrations: Right now, nobody may join this instantiation.
     contact: Contact
     contact_missing: No contact
@@ -39,6 +40,7 @@ en-OU:
     following: Following
     media: Photos
     moved_html: "%{name} is now at %{new_profile_link}:"
+    network_hidden: This information is hiding
     nothing_here: Sorry, nothing in this spot!
     people_followed_by: Accounts whom %{name} follows
     people_who_follow: Accounts who follow %{name}
@@ -48,21 +50,29 @@ en-OU:
     reserved_username: An account is using this alias
     roles:
       admin: Admin
+      bot: Bot
       moderator: Mod
     unfollow: Unfollow
   admin:
     account_moderation_notes:
-      account: Moderator
       create: Create
-      created_at: Date
       created_msg: Moderation note successfully created!
       delete: Discard
       destroyed_msg: Moderation note successfully destroyed!
     accounts:
       are_you_sure: Do you want to do this?
+      avatar: Avatar
       by_domain: Domain
+      change_email:
+        changed_msg: Account email successfully changed!
+        current_email: Current Email
+        label: Change Email
+        new_email: New Email
+        submit: Change Email
+        title: Change Email for %{username}
       confirm: Confirm
       confirmed: Thank you!
+      confirming: Confirming
       demote: Demote
       disable: Turn off
       disable_two_factor_authentication: Turn off 2FA
@@ -71,6 +81,7 @@ en-OU:
       domain: Domain
       edit: Modify
       email: Mail
+      email_status: E-mail Status
       enable: Turn on
       enabled: true
       feed_url: RSS URL
@@ -108,6 +119,11 @@ en-OU:
       public: Public
       push_subscription_expires: PuSH subscription expires
       redownload: Refresh avatar
+      remove_avatar: Remove avatar
+      resend_confirmation:
+        already_confirmed: This user is already confirmed
+        send: Resend confirmation email
+        success: Confirmation email successfully sent!
       reset: Reset
       reset_password: Reset password
       resubscribe: Resubscribe
@@ -128,6 +144,7 @@ en-OU:
       statuses: Statuses
       subscribe: Subscribe
       title: Accounts
+      unconfirmed_email: Unconfirmed E-mail
       undo_silenced: Undo silence
       undo_suspension: Undo suspension
       unsubscribe: Unsubscribe
@@ -135,6 +152,8 @@ en-OU:
       web: Web
     action_logs:
       actions:
+        assigned_to_self_report: "%{name} assigned report %{target} to themselves"
+        change_email_user: "%{name} changed the e-mail address of user %{target}"
         confirm_user: "%{name} confirmed e-mail address of user %{target}"
         create_custom_emoji: "%{name} uploaded new emoji %{target}"
         create_domain_block: "%{name} blocked domain %{target}"
@@ -150,10 +169,13 @@ en-OU:
         enable_user: "%{name} enabled login for user %{target}"
         memorialize_account: "%{name} turned %{target}'s account into a memoriam page"
         promote_user: "%{name} promoted user %{target}"
+        remove_avatar_user: "%{name} removed %{target}'s avatar"
+        reopen_report: "%{name} reopened report %{target}"
         reset_password_user: "%{name} reset password of user %{target}"
         resolve_report: "%{name} dismissed report %{target}"
         silence_account: "%{name} silenced %{target}'s account"
         suspend_account: "%{name} suspended %{target}'s account"
+        unassigned_report: "%{name} unassigned report %{target}"
         unsilence_account: "%{name} unsilenced %{target}'s account"
         unsuspend_account: "%{name} unsuspended %{target}'s account"
         update_custom_emoji: "%{name} updated emoji %{target}"
@@ -239,29 +261,44 @@ en-OU:
         expired: Expired
         title: Filter
       title: Invites
+    report_notes:
+      created_msg: Report note successfully created!
+      destroyed_msg: Report note successfully deleted!
     reports:
+      account:
+        note: note
+        report: report
       action_taken_by: Action taken by
       are_you_sure: Are you sure?
+      assign_to_self: Assign to me
+      assigned: Assigned moderator
       comment:
-        label: Comment
         none: None
-      delete: Discard
+      created_at: Reported
       id: ID
       mark_as_resolved: Mark as resolved
-      nsfw:
-        'false': Unhide media attachments
-        'true': Hide media attachments
+      mark_as_unresolved: Mark as unresolved
+      notes:
+        create: Add note
+        create_and_resolve: Resolve with note
+        create_and_unresolve: Reopen with note
+        delete: Delete
+        placeholder: Describe what actions have been taken, or any other related updates...
+      reopen: Reopen report
       report: 'Report #%{id}'
       report_contents: Contents
       reported_account: Reported account
       reported_by: Reported by
       resolved: Resolved
+      resolved_msg: Report successfully resolved!
       silence_account: Silence account
       status: Status
       suspend_account: Suspend account
       target: Target
       title: Reports
+      unassign: Unassign
       unresolved: Unresolved
+      updated_at: Updated
       view: View
     settings:
       activity_api_enabled:
@@ -321,11 +358,8 @@ en-OU:
         delete: Discard
         nsfw_off: NSFW OFF
         nsfw_on: NSFW ON
-      execute: Execute
       failed_to_execute: Failed to execute
       media:
-        hide: Hide media
-        show: Show media
         title: Media
       no_media: No media
       title: Account statuses
@@ -341,6 +375,7 @@ en-OU:
   admin_mailer:
     new_report:
       body: "%{reporter} has reported %{target}"
+      body_remote: Someone from %{domain} has reported %{target}
       subject: New report for %{instance} (#%{id})
   application_mailer:
     notification_preferences: Modify mail options
@@ -379,6 +414,7 @@ en-OU:
     security: Security
     set_new_password: Pick a password
   authorize_follow:
+    already_following: You still follow this account
     error: Sorry, this account was not found
     follow: Follow
     follow_request: 'Will find out of your asking to follow:'
@@ -388,6 +424,11 @@ en-OU:
       return: Back to that account's bio
       web: Go to Mastodon
     title: Follow %{acct}
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      long: "%B %d, %Y"
+      short: "%b %d"
   datetime:
     distance_in_words:
       about_x_hours: "%{count}h"
@@ -467,10 +508,11 @@ en-OU:
     delete: Deactivate
     expired: Expired
     expires_in:
-      '1800': 30 minutes
+      '1800': half an hour
       '21600': 6 hours
       '3600': 1 hour
       '43200': 12 hours
+      '604800': 7 days
       '86400': 1 day
     expires_in_prompt: Never
     generate: Generate
@@ -555,25 +597,15 @@ en-OU:
     other: Additional
     publishing: Publishing
     web: Display
-  push_notifications:
-    favourite:
-      title: "%{name} favourited your status"
-    follow:
-      title: "%{name} is now following you"
-    group:
-      title: "%{count} notifications"
-    mention:
-      action_boost: Boost
-      action_expand: Show full
-      action_favourite: Star
-      title: "%{name} mentioned you"
-    reblog:
-      title: "%{name} boosted your status"
   remote_follow:
     acct: Add your alias@domain you want to follow from
     missing_resource: Could not find mandatory URL for your account
     proceed: Go to follow
     prompt: 'Do you want to follow:'
+  remote_unfollow:
+    error: Error
+    title: Title
+    unfollowed: Unfollowed
   sessions:
     activity: Last activity
     browser: Browsing Tool
@@ -632,14 +664,18 @@ en-OU:
     your_apps: Your applications
   statuses:
     attached:
-      description: 'Attached: %{attached}'
+      description: 'Attaching ok: %{attached}'
       image:
-        one: "%{count} image"
-        other: "%{count} images"
+        one: "%{count} pic"
+        other: "%{count} pics"
       video:
-        one: "%{count} video"
-        other: "%{count} videos"
-    content_warning: 'Content warning: %{warning}'
+        one: "%{count} vid"
+        other: "%{count} vids"
+    boosted_from_html: Boost from %{acct_link}
+    content_warning: 'Topic warning: %{warning}'
+    disallowed_hashtags:
+      one: 'contains an ungood hashtag: %{tags}'
+      other: 'contains ungood hashtags: %{tags}'
     open_in_web: Go to http location
     over_character_limit: past symbol limit of %{max}
     pin_errors:
@@ -732,7 +768,9 @@ en-OU:
       <p>Originally adapted from the <a href="https://github.com/discourse/discourse">Discourse privacy policy</a>.</p>
     title: "%{instance} Terms of Service and Privacy Policy"
   themes:
+    contrast: High contrast
     default: Mastodon
+    mastodon-light: Mastodon (light)
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
@@ -741,15 +779,15 @@ en-OU:
     description_html: If you allow <strong>two-factor login</strong>, a string of digits will go to you via sms or an auth app, which you will add to your login form.
     disable: Disallow
     enable: Allow
-    enabled: Two-factor authentication is enabled
-    enabled_success: Your two-factor login took!
+    enabled: Two-factor auth is on
+    enabled_success: Your two-factor login is on!
     generate_recovery_codes: Build backup strings
     instructions_html: "<strong>Scan this QR visual into an app</strong>. From now on, that app will know your string of digits for login."
-    lost_recovery_codes: Recovery codes allow you to regain access to your account if you lose your phone. If you've lost your recovery codes, you can regenerate them here. Your old recovery codes will be invalidated.
+    lost_recovery_codes: Backup digits allow you to log in to your account if you can't find your app host. If you lost your backup digits, you can ditch that batch and obtain a virgin batch now.
     manual_instructions: 'If you can''t scan this QR visual and must add it manually, this is a plain string of it:'
-    recovery_codes: Backup recovery codes
-    recovery_codes_regenerated: Recovery codes successfully regenerated
-    recovery_instructions_html: If you ever lose access to your phone, you can use one of the recovery codes below to regain access to your account. <strong>Keep the recovery codes safe</strong>. For example, you may print them and store them with other important documents.
+    recovery_codes: Backup backup digits
+    recovery_codes_regenerated: 'Status of making backup digits: ok'
+    recovery_instructions_html: If you can't find your phone, you can submit a backup string log in to your account. <strong>Put a copy of your backup digits in a good location</strong>. You could print and stash your backup digits with your important tax info, mayhap.
     setup: Start up
     wrong_code: You put in an invalid auth string. Is your clock working?
   user_mailer:
@@ -778,10 +816,6 @@ en-OU:
   users:
     invalid_email: That mail is invalid
     invalid_otp_token: Invalid two-factor digits
+    otp_lost_help_html: If you lost both, you may mail %{email}
     seamless_external_login: You are logged in via an external service, so password and e-mail settings are not available.
     signed_in_as: 'Signed in as:'
-  date:
-    formats:
-      default: "%Y-%m-%d"
-      short: "%b %d"
-      long: "%B %d, %Y"

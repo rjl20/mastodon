@@ -19,4 +19,4 @@ en-OU:
         tag:
           attributes:
             name:
-              invalid: 'activerecord.errors.models.tag.attributes.name.invalid'
+              invalid: activerecord.errors.models.tag.attributes.name.invalid
