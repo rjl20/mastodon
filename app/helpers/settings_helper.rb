@@ -10,6 +10,7 @@ module SettingsHelper
     bg: 'Български',
     ca: 'Català',
     co: 'Corsu',
+    da: 'Dansk',
     de: 'Deutsch',
     el: 'Ελληνικά',
     eo: 'Esperanto',
