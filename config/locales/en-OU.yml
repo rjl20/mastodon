@@ -410,6 +410,9 @@ en-OU:
     migrate_account_html: If you want this account to point to an account that is not this account, you can <a href="%{path}">do that by clicking this spot</a>.
     or: or
     or_log_in_with: Or log in with
+    providers:
+      cas: CAS
+      saml: SAML
     register: Sign up
     register_elsewhere: Sign up for Mastodon, but not on this host
     resend_confirmation: Mail confirmation instructions again
@@ -609,7 +612,9 @@ en-OU:
   oulipo:
     invalid_symbol: Invalid symbol
   pagination:
+    newer: Newer
     next: Forward
+    older: Older
     prev: Back
     truncate: "&hellip;"
   preferences:
