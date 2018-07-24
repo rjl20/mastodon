@@ -79,6 +79,7 @@ en-OU:
         type: Import kind
         username: Login Alias
         username_or_email: Login Alias or Mail
+        whole_word: Full word
       interactions:
         must_be_follower: Block notifications from folks not following you
         must_be_following: Block notifications from folks you don't follow
