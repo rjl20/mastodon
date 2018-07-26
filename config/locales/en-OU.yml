@@ -459,7 +459,7 @@ en-OU:
     warning_title: Disseminated content availability
   errors:
     '403': You may not look at this spot.
-    '404': The page you were looking for doesn't exist.
+    '404': Nothing to display at this URL.
     '410': This isn't a spot now.
     '422':
       content: Validation didn't work. Is your configuration blocking us from storing browsing data?
@@ -472,9 +472,9 @@ en-OU:
   exports:
     archive_takeout:
       date: Date
-      download: Download your archive
+      download: Download your history
       hint_html: You can request an archive of your <strong>toots and uploaded media</strong>. The exported data will be in ActivityPub format, readable by any compliant software.
-      in_progress: Compiling your archive...
+      in_progress: Compiling your history...
       request: Request your archive
       size: Size
     blocks: You block
