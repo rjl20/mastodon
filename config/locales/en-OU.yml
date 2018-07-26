@@ -24,7 +24,7 @@ en-OU:
       real_conversation_title: Built for actual communication
       within_reach_body: Apps for iOS, Android, and various platforms thanks to an API allow you to follow up with your contacts in any spot.
       within_reach_title: Always in proximity
-    generic_description: "%{domain} is one instantiation in our world"
+    generic_description: "%{domain} is an instantiation in our world"
     hosted_on: Mastodon on %{domain}
     learn_more: Additional info
     other_instances: Instantiation list
@@ -45,7 +45,7 @@ en-OU:
     people_followed_by: Accounts whom %{name} follows
     people_who_follow: Accounts who follow %{name}
     posts: Toots
-    posts_with_replies: Toots and replies
+    posts_with_replies: Toots and tootbacks
     remote_follow: Follow from afar
     reserved_username: An account is using this alias
     roles:
@@ -389,7 +389,7 @@ en-OU:
     view_status: Look at Post
   applications:
     created: Application addition took
-    destroyed: Application successfully deleted
+    destroyed: Application thrown away
     invalid_url: That URL is invalid
     regenerate_token: Add access token
     token_regenerated: Access token successfully regenerated
@@ -397,7 +397,7 @@ en-OU:
     your_token: Your access token
   auth:
     agreement_html: By signing up you must follow <a href="%{rules_path}">our social contract</a> and <a href="%{terms_path}">our privacy policy</a>.
-    change_password: Authorization
+    change_password: Modify password
     confirm_email: Confirm mail
     delete_account: Kill account
     delete_account_html: If you wish to kill your account, you can <a href="%{path}">click this spot</a>. You must confirm.
@@ -417,7 +417,7 @@ en-OU:
     register_elsewhere: Sign up for Mastodon, but not on this host
     resend_confirmation: Mail confirmation instructions again
     reset_password: Forgot password
-    security: Security
+    security: Password and such
     set_new_password: Pick a password
   authorize_follow:
     already_following: You still follow this account
@@ -575,7 +575,7 @@ en-OU:
       subject:
         one: "1 notification following your last visit \U0001F418"
         other: "%{count} notifications following your last visit \U0001F418"
-      title: In your absence…
+      title: What Oulipo doings did you miss out on?
     favourite:
       body: 'Your status got a star from %{name}:'
       subject: "%{name} put a star on your status"
@@ -676,7 +676,7 @@ en-OU:
   settings:
     authorized_apps: Apps with authorization
     back: Back to Mastodon
-    delete: Account deletion
+    delete: Throw away this account
     development: Coding
     edit_profile: Modify bio
     export: Data copying
@@ -706,10 +706,10 @@ en-OU:
     open_in_web: Go to http location
     over_character_limit: past symbol limit of %{max}
     pin_errors:
-      limit: You have already pinned the maximum number of toots
-      ownership: Someone else's toot cannot be pinned
-      private: Non-public toot cannot be pinned
-      reblog: A boost cannot be pinned
+      limit: You did as many pins as you could up to now
+      ownership: Can't pin a toot that's not your own
+      private: Can't pin non-public toots
+      reblog: Can't pin boosts
     show_more: Show additional
     title: '%{name}: "%{quote}"'
     visibilities:
@@ -721,7 +721,7 @@ en-OU:
       unlisted_long: Public, but will not display in a public activity list
   stream_entries:
     click_to_show: Click to show
-    pinned: Pinned toot
+    pinned: Toot with a pin
     reblogged: boosts
     sensitive_content: Tricky
   terms:
