@@ -73,7 +73,7 @@
   "compose_form.spoiler.marked": "Words hiding with warning",
   "compose_form.spoiler.unmarked": "Words not hiding",
   "compose_form.spoiler_placeholder": "Add your warning",
-  "confirmation_modal.cancel": "Discard",
+  "confirmation_modal.cancel": "No, don't",
   "confirmations.block.confirm": "Block",
   "confirmations.block.message": "Do you you want to block {name}?",
   "confirmations.delete.confirm": "Discard",
