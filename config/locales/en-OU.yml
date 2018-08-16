@@ -473,9 +473,9 @@ en-OU:
     archive_takeout:
       date: Date
       download: Download your history
-      hint_html: You can request an archive of your <strong>toots and uploaded media</strong>. The exported data will be in ActivityPub format, readable by any compliant software.
+      hint_html: You can ask for a full list of your <strong>toots and ancillary stuff</strong>. All data in your list will drop into ActivityPub format, which should work with any compliant program.
       in_progress: Compiling your history...
-      request: Request your archive
+      request: Ask for your full list of toots
       size: Size
     blocks: You block
     csv: CSV
@@ -528,7 +528,7 @@ en-OU:
   in_memoriam_html: In Memoriam.
   invites:
     delete: Deactivate
-    expired: Expired
+    expired: Historical
     expires_in:
       '1800': half an hour
       '21600': 6 hours
@@ -536,7 +536,7 @@ en-OU:
       '43200': 12 hours
       '604800': 7 days
       '86400': 1 day
-    expires_in_prompt: Never
+    expires_in_prompt: Not at all
     generate: Generate
     invited_by: 'Your invitation is from:'
     max_uses:
