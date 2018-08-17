@@ -590,7 +590,7 @@ en-OU:
       subject: 'Follow awaiting confirmation: %{name}'
       title: New follow request
     mention:
-      action: Reply
+      action: Toot back
       body: 'You got a tag by %{name} in:'
       subject: You got a tag from %{name}
       title: New mention
@@ -629,7 +629,7 @@ en-OU:
     proceed: Go to follow
     prompt: 'Do you want to follow:'
   remote_unfollow:
-    error: Error
+    error: Mishap
     title: Title
     unfollowed: Unfollowed
   sessions:

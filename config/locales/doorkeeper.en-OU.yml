@@ -25,7 +25,7 @@ en-OU:
         edit: Edit
         submit: Submit
       confirmations:
-        destroy: Are you sure?
+        destroy: Do you confirm this?
       edit:
         title: Edit application
       form:
