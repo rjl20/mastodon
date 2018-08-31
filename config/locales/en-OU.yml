@@ -16,14 +16,14 @@ en-OU:
       <h3>A good place for rules</h3>
       <p>The extended description has not been set up yet.</p>
     features:
-      humane_approach_body: By looking at failings in prior social toos, Mastodon aims to put morality as top priority to combat misapplications of social computing.
+      humane_approach_body: By looking at failings in prior social tools, Mastodon aims to put morality as top priority to combat misapplications of social computing.
       humane_approach_title: A human approach
       not_a_product_body: Mastodon is not a for-profit tool. No ads, no data mining, no DRM. Nobody is a singular authority.
       not_a_product_title: For a human, not a product
       real_conversation_body: With 500 symbols at your disposal and support for granular posts and tricky topic warnings, you can chat how you want to.
       real_conversation_title: Built for actual communication
       within_reach_body: Apps for iOS, Android, and various platforms thanks to an API allow you to follow up with your contacts in any spot.
-      within_reach_title: Always in proximity
+      within_reach_title: Always at hand
     generic_description: "%{domain} is an instantiation in our world"
     hosted_on: Mastodon on %{domain}
     learn_more: Additional info
@@ -823,26 +823,26 @@ en-OU:
       subject: Your archive is ready for download
       title: Archive takeout
     welcome:
-      edit_profile_action: Setup profile
-      edit_profile_step: You can customize your profile by uploading an avatar, header, changing your display name and more. If you’d like to review new followers before they’re allowed to follow you, you can lock your account.
-      explanation: Here are some tips to get you started
+      edit_profile_action: Add your avatar, bio, and so on
+      edit_profile_step: Upload an avatar, top background, and modify your nym. If you want to manually OK who follows you, you can lock your account.
+      explanation: Tips for Oulipians just starting out
       final_action: Start posting
-      final_step: 'Start posting! Even without followers your public messages may be seen by others, for example on the local timeline and in hashtags. You may want to introduce yourself on the #introductions hashtag.'
+      final_step: 'Start posting! Nobody following you? Folks can still look at your public toots in a Local Activity column. You may want to say hi and hashtag it #introductions.'
       full_handle: Your full alias
-      full_handle_hint: This is what you would tell your friends so they can message or follow you from another instance.
-      review_preferences_action: Change preferences
-      review_preferences_step: Make sure to set your preferences, such as which emails you'd like to receive, or what privacy level you’d like your posts to default to. If you don’t have motion sickness, you could choose to enable GIF autoplay.
-      subject: Welcome to Mastodon
-      tip_bridge_html: If you are coming from Twitter, you can find your friends on Mastodon by using the <a href="%{bridge_url}">bridge app</a>. It only works if they also used the bridge app though!
-      tip_federated_timeline: The federated timeline is a firehose view of the Mastodon network. But it only includes people your neighbours are subscribed to, so it's not complete.
-      tip_following: You follow your server's admin(s) by default. To find more interesting people, check the local and federated timelines.
-      tip_local_timeline: The local timeline is a firehose view of people on %{instance}. These are your immediate neighbours!
-      tip_mobile_webapp: If your mobile browser offers you to add Mastodon to your homescreen, you can receive push notifications. It acts like a native app in many ways!
+      full_handle_hint: This is what you would show to your pals who want to DM or follow you from additional instantiations.
+      review_preferences_action: Modify options
+      review_preferences_step: Look at all your options, such as mail notifications and automatic post privacy options. You can turn on GIF autoplay, if you don't go dizzy from quick motions.
+      subject: Mastodon says hi
+      tip_bridge_html: Coming from that bird spot? You can find your pals on Mastodon with <a href="%{bridge_url}">this app</a>. It only works if your pals also sign up for it!
+      tip_federated_timeline: Global activity shows all toots from folks your pals on Oulipo follow.
+      tip_following: You follow Oulipo admin(s) automatically. To find additional accounts to follow, look at local and global activity columns.
+      tip_local_timeline: Local activity shows all toots from folks on %{instance}. 
+      tip_mobile_webapp: If your mobile browser asks you to add Mastodon to your homescreen, you can receive push notifications. It acts like a native app in many ways!
       tips: Tips
-      title: Welcome aboard, %{name}!
+      title: Oulipo says hi to you, %{name}!
   users:
     invalid_email: That mail is invalid
     invalid_otp_token: Invalid two-factor digits
     otp_lost_help_html: If you lost both, you may mail %{email}
     seamless_external_login: You are logged in via an external service, so password and e-mail settings are not available.
-    signed_in_as: 'Signed in as:'
+    signed_in_as: 'Posting as:'
