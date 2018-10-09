@@ -612,9 +612,9 @@ en-OU:
   oulipo:
     invalid_symbol: Invalid symbol
   pagination:
-    newer: Newer
+    newer: Forward
     next: Forward
-    older: Older
+    older: Back
     prev: Back
     truncate: "&hellip;"
   preferences:
