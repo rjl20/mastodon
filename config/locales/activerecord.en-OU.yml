@@ -11,7 +11,7 @@ en-OU:
         account:
           attributes:
             username:
-              invalid: 'Allowed glyphs: A-D and F-Z (plus small glyphs), 0-9, and "_"'
+              invalid: 'Valid glyphs: A-D and F-Z (plus small glyphs), 0-9, and "_"'
         status:
           attributes:
             reblog:

@@ -6,12 +6,12 @@ en-OU:
     about_this: About
     administered_by: 'Administrator(s):'
     api: API
-    apps: Mobile apps
+    apps: Apps
     closed_registrations: Right now, nobody may join this instantiation.
     contact: Contact
     contact_missing: No contact
     contact_unavailable: N/A
-    documentation: Documentation
+    documentation: Docs
     extended_description_html: |
       <h3>A good place for rules</h3>
       <p>The extended description has not been set up yet.</p>
@@ -489,6 +489,50 @@ en-OU:
       web: Go to Mastodon
     title: Follow %{acct}
   date:
+    abbr_day_names:
+      - Sun
+      - Mon
+      - Tue
+      - Wed
+      - Thu
+      - Fri
+      - Sat
+    abbr_month_names:
+      - None
+      - Jan
+      - Feb
+      - Mar
+      - Apr
+      - May
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Oct
+      - Nov
+      - Dec
+    day_names:
+      - Sunday
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+    month_names:
+      - None
+      - January
+      - February
+      - March
+      - April
+      - May
+      - June
+      - July
+      - August
+      - September
+      - October
+      - November
+      - December
     formats:
       default: "%Y-%m-%d"
       long: "%B %d, %Y"
