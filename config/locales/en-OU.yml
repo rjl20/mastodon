@@ -907,6 +907,7 @@ en-OU:
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
+      month: "%b %Y"
   two_factor_authentication:
     code_hint: Submit digits that your auth app displays to confirm
     description_html: If you allow <strong>two-factor login</strong>, a string of digits will go to you via sms or an auth app, which you will add to your login form.
