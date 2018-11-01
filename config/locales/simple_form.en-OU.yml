@@ -4,7 +4,7 @@ en-OU:
     hints:
       defaults:
         autofollow: People who sign up through the invite will automatically follow you
-        avatar: PNG, GIF or JPG. At most 2MB. Will crunch down to 400x400px
+        avatar: PNG, GIF or JPG. At most %{size}. Will crunch down to %{dimensions}px
         bot: This account mainly acts automatically and might lack monitoring
         context: One or multiple contexts where the filter should apply
         digest: Only if you lack activity for many days and only if you got DMs or @s in such days
@@ -12,7 +12,7 @@ en-OU:
           one: <span class="name-counter">1</span> glyphs to go
           other: <span class="name-counter">%{count}</span> glyphs to go
         fields: You can put up to 4 things in a box on your bio
-        header: PNG, GIF or JPG. At most 2MB. Will crunch to 700x335px
+        header: PNG, GIF or JPG. At most %{size}. Will crunch to %{dimensions}px
         irreversible: Filtered toots will disappear irreversibly, even if filter is later removed
         locale: The language of the user interface, e-mails and push notifications
         locked: You want to manually confirm follows

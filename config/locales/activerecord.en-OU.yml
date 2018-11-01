@@ -12,7 +12,7 @@ en-OU:
           attributes:
             username:
               invalid: 'Valid glyphs: A-D and F-Z (plus small glyphs), 0-9, and "_"'
-              taken: 'That account was on our list prior to now. Sorry!'
+              taken: That account was on our list prior to now. Sorry!
         status:
           attributes:
             reblog:
