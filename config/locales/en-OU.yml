@@ -42,6 +42,7 @@ en-OU:
     followers: Accounts following
     following: Following
     joined: Joined %{date}
+    last_active: last active
     link_verified_on: Ownership of this link was checked on %{date}
     media: Photos
     moved_html: "%{name} is now at %{new_profile_link}:"
@@ -62,6 +63,9 @@ en-OU:
     statuses: Statuses
     unfollow: Unfollow
   admin:
+    account_actions:
+      action: Perform action
+      title: Perform moderation action on %{acct}
     account_moderation_notes:
       create: Create
       created_msg: Moderation note successfully created!
@@ -81,6 +85,7 @@ en-OU:
       confirm: Confirm
       confirmed: Thank you!
       confirming: Confirming
+      deleted: Deleted
       demote: Demote
       disable: Turn off
       disable_two_factor_authentication: Turn off 2FA
@@ -96,8 +101,11 @@ en-OU:
       followers: Accounts Following
       followers_url: Accounts Following URL
       follows: Follows
+      header: Header
       inbox_url: Inbox URL
+      invited_by: Invited by
       ip: IP
+      joined: Joined
       location:
         all: All
         local: Local
@@ -107,6 +115,7 @@ en-OU:
       media_attachments: Photos
       memorialize: Turn into memoriam
       moderation:
+        active: Active
         all: All
         silenced: Silenced
         suspended: Suspended
@@ -129,6 +138,7 @@ en-OU:
       push_subscription_expires: PuSH subscription expires
       redownload: Refresh avatar
       remove_avatar: Remove avatar
+      remove_header: Remove header
       resend_confirmation:
         already_confirmed: This user is already confirmed
         send: Resend confirmation email
@@ -160,12 +170,14 @@ en-OU:
       undo_suspension: Undo suspension
       unsubscribe: Unsubscribe
       username: Username
+      warn: Warn
       web: Web
     action_logs:
       actions:
         assigned_to_self_report: "%{name} assigned report %{target} to themselves"
         change_email_user: "%{name} changed the e-mail address of user %{target}"
         confirm_user: "%{name} confirmed e-mail address of user %{target}"
+        create_account_warning: "%{name} sent a warning to %{target}"
         create_custom_emoji: "%{name} uploaded new emoji %{target}"
         create_domain_block: "%{name} blocked domain %{target}"
         create_email_domain_block: "%{name} blacklisted e-mail domain %{target}"
@@ -224,6 +236,7 @@ en-OU:
       config: Configuration
       feature_deletions: Account deletions
       feature_invites: Invite links
+      feature_profile_directory: Profile directory
       feature_registrations: Registrations
       feature_relay: Federation relay
       features: Features
@@ -258,11 +271,15 @@ en-OU:
       reject_media_hint: Removes locally stored media files and refuses to download any in the future. Irrelevant for suspensions
       reject_reports: Reject reports
       reject_reports_hint: Ignore all reports coming from this domain. Irrelevant for suspensions
+      rejecting_media: rejecting media files
+      rejecting_reports: rejecting reports
       severities:
         noop: None
         silence: Silence
         suspend: Suspend
-      severity: Severity
+      severity:
+        silence: silenced
+        suspend: suspended
       show:
         affected_accounts:
           one: One account in the database affected
@@ -284,12 +301,28 @@ en-OU:
         create: Add domain
         title: New e-mail blacklist entry
       title: E-mail blacklist
+    followers:
+      back_to_account: Back To Account
+      title: "%{acct}'s Followers"
     instances:
       account_count: Known accounts
+      delivery_available: Delivery is available
       domain_name: Domain
+      known_accounts:
+        one: "%{count} known account"
+        other: "%{count} known accounts"
+      moderation:
+        all: All
+        limited: Limited
+        title: Moderation
       reset: Reset
       search: Search
       title: Known instantiations
+      total_blocked_by_us: Blocked by us
+      total_followed_by_them: Followed by them
+      total_followed_by_us: Followed by us
+      total_reported: Reports about them
+      total_storage: Media attachments
     invites:
       deactivate_all: Deactivate all
       filter:
@@ -377,6 +410,9 @@ en-OU:
       preview_sensitive_media:
         desc_html: Link previews on other websites will display a thumbnail even if the media is marked as sensitive
         title: Show sensitive media in OpenGraph previews
+      profile_directory:
+        desc_html: Allow users to be discoverable
+        title: Enable profile directory
       registrations:
         closed_message:
           desc_html: Displayed on frontpage when registrations are closed. You can use HTML tags
@@ -442,7 +478,21 @@ en-OU:
       proceed: Proceed
       title: Suspend %{acct}
       warning_html: 'Suspending this account will <strong>irreversibly</strong> delete data from this account, which includes:'
+    tags:
+      accounts: Accounts
+      hidden: Hidden
+      hide: Hide from directory
+      name: Hashtag
+      title: Hashtags
+      unhide: Show in directory
+      visible: Visible
     title: Administration
+    warning_presets:
+      add_new: Add new
+      delete: Delete
+      edit: Edit
+      edit_preset: Edit warning preset
+      title: Manage warning presets
   admin_mailer:
     new_report:
       body: "%{reporter} has reported %{target}"
@@ -569,6 +619,16 @@ en-OU:
     success_msg: Your account was successfully deleted
     warning_html: Only deletion of content from this particular instance is guaranteed. Content that has been widely shared is likely to leave traces. Offline servers and servers that have unsubscribed from your updates will not update their databases.
     warning_title: Disseminated content availability
+  directories:
+    directory: Profile directory
+    enabled: You are currently listed in the directory.
+    enabled_but_waiting: You have opted-in to be listed in the directory, but you do not have the minimum number of followers (%{min_followers}) to be listed yet.
+    explanation: Discover users based on their interests
+    explore_mastodon: Explore %{title}
+    how_to_enable: You are not currently opted-in to the directory. You can opt-in below. Use hashtags in your bio text to be listed under specific hashtags!
+    people:
+      one: "%{count} person"
+      other: "%{count} people"
   errors:
     '403': You may not look at this spot.
     '404': Nothing to display at this URL.
@@ -591,7 +651,9 @@ en-OU:
       size: Size
     blocks: You block
     csv: CSV
+    domain_blocks: Domain blocks
     follows: You follow
+    lists: Lists
     mutes: You don't show
     storage: Data
   filters:
@@ -742,13 +804,27 @@ en-OU:
     no_account_html: Don't have an account? You can <a href='%{sign_up_path}' target='_blank'>sign up here</a>
     proceed: Go to follow
     prompt: 'Do you want to follow:'
+    reason_html: "<strong>Why is this step necessary?</strong> <code>%{instance}</code> might not be the server where you are registered, so we need to redirect you to your home server first."
   remote_interaction:
+    favourite:
+      proceed: Proceed to favourite
+      prompt: 'You want to favourite this toot:'
     proceed: Proceed to interact
     prompt: 'You want to interact with this toot:'
+    reblog:
+      proceed: Proceed to boost
+      prompt: 'You want to boost this toot:'
+    reply:
+      proceed: Proceed to reply
+      prompt: 'You want to reply to this toot:'
   remote_unfollow:
     error: Mishap
     title: Title
     unfollowed: Unfollowed
+  scheduled_statuses:
+    over_daily_limit: You have exceeded the limit of %{limit} scheduled toots for that day
+    over_total_limit: You have exceeded the limit of %{limit} scheduled toots
+    too_soon: The scheduled date must be in the future
   sessions:
     activity: Last activity
     browser: Browsing Tool
@@ -940,6 +1016,22 @@ en-OU:
       explanation: You requested a full backup of your Mastodon account. It's now ready for download!
       subject: Your archive is ready for download
       title: Archive takeout
+    warning:
+      explanation:
+        disable: While your account is frozen, your account data remains intact, but you cannot perform any actions until it is unlocked.
+        silence: While your account is limited, only people who are already following you will see your toots on this server, and you may be excluded from various public listings. However, others may still manually follow you.
+        suspend: Your account has been suspended, and all of your toots and your uploaded media files have been irreversibly removed from this server, and servers where you had followers.
+      review_server_policies: Review server policies
+      subject:
+        disable: Your account %{acct} has been frozen
+        none: Warning for %{acct}
+        silence: Your account %{acct} has been limited
+        suspend: Your account %{acct} has been suspended
+      title:
+        disable: Account frozen
+        none: Warning
+        silence: Account limited
+        suspend: Account suspended
     welcome:
       edit_profile_action: Add your avatar, bio, and so on
       edit_profile_step: Upload an avatar, top background, and modify your nym. If you want to manually OK who follows you, you can lock your account.
