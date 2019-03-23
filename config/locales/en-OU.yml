@@ -60,7 +60,6 @@ en-OU:
       admin: Admin
       bot: Bot
       moderator: Mod
-    statuses: Statuses
     unfollow: Unfollow
   admin:
     account_actions:
@@ -125,10 +124,6 @@ en-OU:
       most_recent_ip: Most recent IP
       no_limits_imposed: No limits imposed
       not_subscribed: Not subscribed
-      order:
-        alphabetic: A-Z
-        most_recent: Most now-ish
-        title: Sort
       outbox_url: Outbox URL
       perform_full_suspension: Perform full suspension
       profile_url: Profile URL
@@ -157,7 +152,6 @@ en-OU:
       shared_inbox_url: Shared Inbox URL
       show:
         created_reports: Reports created by this account
-        report: report
         targeted_reports: Reports made about this account
       silence: Silence
       silenced: Silenced
@@ -273,10 +267,6 @@ en-OU:
       reject_reports_hint: Ignore all reports coming from this domain. Irrelevant for suspensions
       rejecting_media: rejecting media files
       rejecting_reports: rejecting reports
-      severities:
-        noop: None
-        silence: Silence
-        suspend: Suspend
       severity:
         silence: silenced
         suspend: suspended
@@ -289,7 +279,6 @@ en-OU:
           suspend: Unsuspend all existing accounts from this domain
         title: Undo domain block for %{domain}
         undo: Undo
-      title: Domain blocks
       undo: Undo
     email_domain_blocks:
       add_new: Add new
@@ -306,6 +295,7 @@ en-OU:
       title: "%{acct}'s Followers"
     instances:
       account_count: Known accounts
+      by_domain: Domain
       delivery_available: Delivery is available
       domain_name: Domain
       known_accounts:
@@ -360,7 +350,6 @@ en-OU:
       comment:
         none: None
       created_at: Reported
-      id: ID
       mark_as_resolved: Mark as resolved
       mark_as_unresolved: Mark as unresolved
       notes:
@@ -371,20 +360,15 @@ en-OU:
         placeholder: Describe what actions have been taken, or any other related updates...
       reopen: Reopen report
       report: 'Report #%{id}'
-      report_contents: Contents
       reported_account: Reported account
       reported_by: Reported by
       resolved: Resolved
       resolved_msg: Report successfully resolved!
-      silence_account: Silence account
       status: Status
-      suspend_account: Suspend account
-      target: Target
       title: Reports
       unassign: Unassign
       unresolved: Unresolved
       updated_at: Updated
-      view: View
     settings:
       activity_api_enabled:
         desc_html: Counts of locally posted statuses, active users, and new registrations in weekly buckets
@@ -472,12 +456,6 @@ en-OU:
       last_delivery: Last delivery
       title: WebSub
       topic: Topic
-    suspensions:
-      bad_acct_msg: The confirmation value didn't match up. Are you suspending the right account?
-      hint_html: 'To confirm the suspension of the account, please enter %{value} into the field below:'
-      proceed: Proceed
-      title: Suspend %{acct}
-      warning_html: 'Suspending this account will <strong>irreversibly</strong> delete data from this account, which includes:'
     tags:
       accounts: Accounts
       hidden: Hidden
@@ -809,8 +787,6 @@ en-OU:
     favourite:
       proceed: Proceed to favourite
       prompt: 'You want to favourite this toot:'
-    proceed: Proceed to interact
-    prompt: 'You want to interact with this toot:'
     reblog:
       proceed: Proceed to boost
       prompt: 'You want to boost this toot:'
@@ -1043,7 +1019,6 @@ en-OU:
       review_preferences_action: Modify options
       review_preferences_step: Look at all your options, such as mail notifications and automatic post privacy options. You can turn on GIF autoplay, if you don't go dizzy from quick motions.
       subject: Mastodon says hi
-      tip_bridge_html: Coming from that bird spot? You can find your pals on Mastodon with <a href="%{bridge_url}">this app</a>. It only works if your pals also sign up for it!
       tip_federated_timeline: Global activity shows all toots from folks your pals on Oulipo follow.
       tip_following: You follow Oulipo admin(s) automatically. To find additional accounts to follow, look at local and global activity columns.
       tip_local_timeline: Local activity shows all toots from folks on %{instance}.
