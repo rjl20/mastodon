@@ -27,7 +27,7 @@ class Formatter
       return html.html_safe # rubocop:disable Rails/OutputSafety
     end
 
-    linkable_accounts = status.mentions.map(&:account)
+    linkable_accounts = status.active_mentions.map(&:account)
     linkable_accounts << status.account
 
     html = raw_content
@@ -90,12 +90,16 @@ class Formatter
 
   private
 
+  def html_entities
+    @html_entities ||= HTMLEntities.new
+  end
+
   def encode(html)
-    HTMLEntities.new.encode(html)
+    html_entities.encode(html)
   end
 
   def encode_and_link_urls(html, accounts = nil, options = {})
-    entities = Extractor.extract_entities_with_indices(html, extract_url_without_protocol: false)
+    entities = utf8_friendly_extractor(html, extract_url_without_protocol: false)
 
     if accounts.is_a?(Hash)
       options  = accounts
@@ -124,9 +128,9 @@ class Formatter
     return html if emojis.empty?
 
     emoji_map = if animate
-                  emojis.map { |e| [e.shortcode, full_asset_url(e.image.url)] }.to_h
+                  emojis.each_with_object({}) { |e, h| h[e.shortcode] = full_asset_url(e.image.url) }
                 else
-                  emojis.map { |e| [e.shortcode, full_asset_url(e.image.url(:static))] }.to_h
+                  emojis.each_with_object({}) { |e, h| h[e.shortcode] = full_asset_url(e.image.url(:static)) }
                 end
 
     i                     = -1
@@ -143,7 +147,7 @@ class Formatter
         emoji     = emoji_map[shortcode]
 
         if emoji
-          replacement = "<img draggable=\"false\" class=\"emojione\" alt=\":#{shortcode}:\" title=\":#{shortcode}:\" src=\"#{emoji}\" />"
+          replacement = "<img draggable=\"false\" class=\"emojione\" alt=\":#{encode(shortcode)}:\" title=\":#{encode(shortcode)}:\" src=\"#{encode(emoji)}\" />"
           before_html = shortname_start_index.positive? ? html[0..shortname_start_index - 1] : ''
           html        = before_html + replacement + html[i + 1..-1]
           i          += replacement.size - (shortcode.size + 2) - 1
@@ -195,6 +199,53 @@ class Formatter
     result.flatten.join
   end
 
+  UNICODE_ESCAPE_BLACKLIST_RE = /\p{Z}|\p{P}/
+
+  def utf8_friendly_extractor(text, options = {})
+    old_to_new_index = [0]
+
+    escaped = text.chars.map do |c|
+      output = begin
+        if c.ord.to_s(16).length > 2 && UNICODE_ESCAPE_BLACKLIST_RE.match(c).nil?
+          CGI.escape(c)
+        else
+          c
+        end
+      end
+
+      old_to_new_index << old_to_new_index.last + output.length
+
+      output
+    end.join
+
+    # Note: I couldn't obtain list_slug with @user/list-name format
+    # for mention so this requires additional check
+    special = Extractor.extract_urls_with_indices(escaped, options).map do |extract|
+      # exactly one of :url, :hashtag, :screen_name, :cashtag keys is present
+      key = (extract.keys & [:url, :hashtag, :screen_name, :cashtag]).first
+
+      new_indices = [
+        old_to_new_index.find_index(extract[:indices].first),
+        old_to_new_index.find_index(extract[:indices].last),
+      ]
+
+      has_prefix_char = [:hashtag, :screen_name, :cashtag].include?(key)
+      value_indices = [
+        new_indices.first + (has_prefix_char ? 1 : 0), # account for #, @ or $
+        new_indices.last - 1,
+      ]
+
+      next extract.merge(
+        :indices => new_indices,
+        key => text[value_indices.first..value_indices.last]
+      )
+    end
+
+    standard = Extractor.extract_entities_with_indices(text, options)
+
+    Extractor.remove_overlapping_entities(special + standard)
+  end
+
   def link_to_url(entity, options = {})
     url        = Addressable::URI.parse(entity[:url])
     html_attrs = { target: '_blank', rel: 'nofollow noopener' }
@@ -212,7 +263,7 @@ class Formatter
     return link_to_account(acct) unless linkable_accounts
 
     account = linkable_accounts.find { |item| TagManager.instance.same_acct?(item.acct, acct) }
-    account ? mention_html(account) : "@#{acct}"
+    account ? mention_html(account) : "@#{encode(acct)}"
   end
 
   def link_to_account(acct)
@@ -221,7 +272,7 @@ class Formatter
     domain  = nil if TagManager.instance.local_domain?(domain)
     account = EntityCache.instance.mention(username, domain)
 
-    account ? mention_html(account) : "@#{acct}"
+    account ? mention_html(account) : "@#{encode(acct)}"
   end
 
   def link_to_hashtag(entity)
@@ -239,10 +290,10 @@ class Formatter
   end
 
   def hashtag_html(tag)
-    "<a href=\"#{tag_url(tag.downcase)}\" class=\"mention hashtag\" rel=\"tag\">#<span>#{tag}</span></a>"
+    "<a href=\"#{encode(tag_url(tag.downcase))}\" class=\"mention hashtag\" rel=\"tag\">#<span>#{encode(tag)}</span></a>"
   end
 
   def mention_html(account)
-    "<span class=\"h-card\"><a href=\"#{TagManager.instance.url_for(account)}\" class=\"u-url mention\">@<span>#{account.username}</span></a></span>"
+    "<span class=\"h-card\"><a href=\"#{encode(TagManager.instance.url_for(account))}\" class=\"u-url mention\">@<span>#{encode(account.username)}</span></a></span>"
   end
 end
