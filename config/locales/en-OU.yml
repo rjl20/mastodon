@@ -32,16 +32,16 @@ en-OU:
     source_code: Github
     status_count_after: things
     status_count_before: Who said
-    terms: Terms of service
+    terms: Our ToS
     user_count_after: Oulipians
     user_count_before: Host to
     what_is_mastodon: What is Mastodon?
   accounts:
-    choices_html: "%{name}'s choices:"
+    choices_html: "%{name} pins accounts:"
     follow: Follow
     followers: Accounts following
     following: Following
-    joined: Joined %{date}
+    joined: First login on %{date}
     last_active: last active
     link_verified_on: Ownership of this link was checked on %{date}
     media: Photos
@@ -51,7 +51,7 @@ en-OU:
     people_followed_by: Accounts whom %{name} follows
     people_who_follow: Accounts who follow %{name}
     pin_errors:
-      following: You must be already following the person you want to endorse
+      following: You must follow this account if you want to pin it
     posts: Toots
     posts_tab_heading: Toots
     posts_with_replies: Toots and tootbacks
