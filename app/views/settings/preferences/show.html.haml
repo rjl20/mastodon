@@ -6,6 +6,7 @@
   %li= link_to t('preferences.publishing'), '#settings_publishing'
   %li= link_to t('preferences.other'), '#settings_other'
   %li= link_to t('preferences.web'), '#settings_web'
+  %li= link_to t('settings.notifications'), settings_notifications_path
 
 = simple_form_for current_user, url: settings_preferences_path, html: { method: :put } do |f|
   = render 'shared/error_messages', object: current_user
@@ -34,6 +35,9 @@
   .fields-group
     = f.input :setting_hide_network, as: :boolean, wrapper: :with_label
 
+  .fields-group
+    = f.input :setting_show_application, as: :boolean, wrapper: :with_label
+
   %hr#settings_web/
 
   .fields-row
@@ -41,6 +45,9 @@
       = f.input :setting_theme, collection: Themes.instance.names, label_method: lambda { |theme| I18n.t("themes.#{theme}", default: theme) }, wrapper: :with_label, include_blank: false, hint: false
     .fields-group.fields-row__column.fields-row__column-6
       = f.input :setting_display_media, collection: ['default', 'show_all', 'hide_all'], wrapper: :with_label, include_blank: false, label_method: lambda { |item| t("simple_form.hints.defaults.setting_display_media_#{item}") }, hint: false
+
+  .fields-group
+    = f.input :setting_advanced_layout, as: :boolean, wrapper: :with_label
 
   .fields-group
     = f.input :setting_unfollow_modal, as: :boolean, wrapper: :with_label

@@ -8,8 +8,10 @@ import Avatar from '../../../components/avatar';
 import RelativeTimestamp from '../../../components/relative_timestamp';
 import DisplayName from '../../../components/display_name';
 import ImmutablePureComponent from 'react-immutable-pure-component';
+import Icon from 'mastodon/components/icon';
 
 const messages = defineMessages({
+  cancel_reblog: { id: 'status.cancel_reblog_private', defaultMessage: 'Unboost' },
   reblog: { id: 'status.reblog', defaultMessage: 'Boost' },
 });
 
@@ -50,6 +52,7 @@ class BoostModal extends ImmutablePureComponent {
 
   render () {
     const { status, intl } = this.props;
+    const buttonText = status.get('reblogged') ? messages.cancel_reblog : messages.reblog;
 
     return (
       <div className='modal-root__modal boost-modal'>
@@ -74,8 +77,8 @@ class BoostModal extends ImmutablePureComponent {
         </div>
 
         <div className='boost-modal__action-bar'>
-          <div><FormattedMessage id='boost_modal.combo' defaultMessage='You can press {combo} to skip this next time' values={{ combo: <span>Shift + <i className='fa fa-retweet' /></span> }} /></div>
-          <Button text={intl.formatMessage(messages.reblog)} onClick={this.handleReblog} ref={this.setRef} />
+          <div><FormattedMessage id='boost_modal.combo' defaultMessage='You can press {combo} to skip this next time' values={{ combo: <span>Shift + <Icon id='retweet' /></span> }} /></div>
+          <Button text={intl.formatMessage(buttonText)} onClick={this.handleReblog} ref={this.setRef} />
         </div>
       </div>
     );
