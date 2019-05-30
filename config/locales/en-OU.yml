@@ -42,7 +42,7 @@ en-OU:
     followers: Accounts following
     following: Following
     joined: First login on %{date}
-    last_active: last active
+    last_active: last activity
     link_verified_on: Ownership of this link was checked on %{date}
     media: Photos
     moved_html: "%{name} is now at %{new_profile_link}:"
@@ -60,7 +60,7 @@ en-OU:
       admin: Admin
       bot: Bot
       moderator: Mod
-    unavailable: Profile unavailable
+    unavailable: Can't show account info
     unfollow: Unfollow
   admin:
     account_actions:
@@ -238,7 +238,7 @@ en-OU:
       config: Configuration
       feature_deletions: Account deletions
       feature_invites: Invite links
-      feature_profile_directory: Profile directory
+      feature_profile_directory: List of accounts
       feature_registrations: Registrations
       feature_relay: Federation relay
       feature_timeline_preview: Timeline preview
@@ -324,13 +324,13 @@ en-OU:
       total_reported: Reports about them
       total_storage: Media attachments
     invites:
-      deactivate_all: Deactivate all
+      deactivate_all: Abandon all
       filter:
         all: All
         available: Available
         expired: Expired
         title: Filter
-      title: Invites
+      title: Invitations
     pending_accounts:
       title: Pending accounts (%{count})
     relays:
@@ -510,7 +510,7 @@ en-OU:
     warning: Be very careful with this data. Never share it with anyone!
     your_token: Your access token
   auth:
-    apply_for_account: Request an invite
+    apply_for_account: Ask for an invitation
     change_password: Modify password
     checkbox_agreement_html: I will conform with <a href="%{rules_path}" target="_blank">instantiation bylaws</a> and <a href="%{terms_path}" target="_blank">ToS</a>
     confirm_email: Confirm mail
@@ -528,7 +528,7 @@ en-OU:
       cas: CAS
       saml: SAML
     register: Sign up
-    registration_closed: "%{instance} is not accepting new members"
+    registration_closed: "%{instance} is not allowing population growth"
     resend_confirmation: Mail confirmation instructions again
     reset_password: Forgot password
     security: Password and such
@@ -617,15 +617,15 @@ en-OU:
     warning_html: Only deletion of content from this particular instance is guaranteed. Content that has been widely shared is likely to leave traces. Offline servers and servers that have unsubscribed from your updates will not update their databases.
     warning_title: Disseminated content availability
   directories:
-    directory: Profile directory
-    enabled: You are currently listed in the directory.
-    enabled_but_waiting: You have opted-in to be listed in the directory, but you do not have the minimum number of followers (%{min_followers}) to be listed yet.
-    explanation: Discover users based on their interests
-    explore_mastodon: Explore %{title}
-    how_to_enable: You are not currently opted-in to the directory. You can opt-in below. Use hashtags in your bio text to be listed under specific hashtags!
+    directory: Account info list
+    enabled: Your account info is in this list
+    enabled_but_waiting: You said to put your account info in this list, but you can't go in this list until a quantity of folks (%{min_followers}) follow you.
+    explanation: Find folks by discussion topics
+    explore_mastodon: Look around %{title}
+    how_to_enable: You didn't ask to go in our account list, but you can do that if you want. Put hashtags in your bio for folks to find you by particular topics.
     people:
-      one: "%{count} person"
-      other: "%{count} people"
+      one: "%{count} individual"
+      other: "%{count} individuals"
   errors:
     '403': You may not look at this spot.
     '404': Nothing to display at this URL.
@@ -637,18 +637,18 @@ en-OU:
     '500':
       content: Sorry, things just don't work right now.
       title: This spot is not working
-    noscript_html: To use Mastodon, you must allow JavaScript. If you don't want to do that, try an <a href="%{apps_path}">app</a> for Mastodon for your platform.
+    noscript_html: Allowing JavaScript is mandatory for participating in Mastodon. If you don't want to do that, try an <a href="%{apps_path}">app</a> for Mastodon for your platform.
   existing_username_validator:
-    not_found: could not find a local user with that username
+    not_found: could not find a matching local account
     not_found_multiple: could not find %{usernames}
   exports:
     archive_takeout:
-      date: Date
+      date: Day
       download: Download your history
       hint_html: You can ask for a full list of your <strong>toots and ancillary stuff</strong>. All data in your list will drop into ActivityPub format, which should work with any compliant program.
       in_progress: Compiling your history...
       request: Ask for your full list of toots
-      size: Size
+      size: Data amount
     blocks: You block
     csv: CSV
     domain_blocks: Domain blocks
@@ -657,9 +657,9 @@ en-OU:
     mutes: You don't show
     storage: Data
   featured_tags:
-    add_new: Add new
+    add_new: Add additional
     errors:
-      limit: You have already featured the maximum amount of hashtags
+      limit: You can only add an additional hashtag if you cut a hashtag first
   filters:
     contexts:
       home: Local activity
@@ -684,7 +684,7 @@ en-OU:
     all: All
     changes_saved_msg: Your modifications took!
     copy: Copy
-    order_by: Order by
+    order_by: Sort by
     save_changes: Confirm
     validation_errors:
       one: Oops, that's not right! Look at this
@@ -692,26 +692,26 @@ en-OU:
   html_validator:
     invalid_markup: 'contains invalid HTML markup: %{error}'
   identity_proofs:
-    active: Active
-    authorize: Yes, authorize
-    authorize_connection_prompt: Authorize this cryptographic connection?
+    active: Functional
+    authorize: Go for it, allow
+    authorize_connection_prompt: Allow this cryptographic link?
     errors:
       failed: The cryptographic connection failed. Please try again from %{provider}.
       keybase:
         invalid_token: Keybase tokens are hashes of signatures and must be 66 hex characters
         verification_failed: Keybase does not recognize this token as a signature of Keybase user %{kb_username}. Please retry from Keybase.
-      wrong_user: Cannot create a proof for %{proving} while logged in as %{current}. Log in as %{proving} and try again.
+      wrong_user: Cannot construct a proof for %{proving} if your account is %{current}. Log in as %{proving} and try again.
     explanation_html: Here you can cryptographically connect your other identities, such as a Keybase profile. This lets other people send you encrypted messages and trust content you send them.
     i_am_html: I am %{username} on %{service}.
     identity: Identity
-    inactive: Inactive
+    inactive: Dormant
     publicize_checkbox: 'And toot this:'
-    publicize_toot: 'It is proven! I am %{username} on %{service}: %{url}'
-    status: Verification status
-    view_proof: View proof
+    publicize_toot: 'This is proof! I am %{username} on %{service}: %{url}'
+    status: Validation status
+    view_proof: Look at proof
   imports:
     modes:
-      merge: Merge
+      merge: Unify
       merge_long: Keep existing records and add new ones
       overwrite: Overwrite
       overwrite_long: Replace current records with the new ones
@@ -725,7 +725,7 @@ en-OU:
     upload: Upload
   in_memoriam_html: R.I.P.
   invites:
-    delete: Deactivate
+    delete: Abandon
     expired: Historical
     expires_in:
       '1800': half an hour
@@ -735,11 +735,11 @@ en-OU:
       '604800': 7 days
       '86400': 1 day
     expires_in_prompt: Not at all
-    generate: Generate
+    generate: Dispatch
     invited_by: 'Your invitation is from:'
     max_uses:
-      one: 1 use
-      other: "%{count} uses"
+      one: 1 activation
+      other: "%{count} activations"
     max_uses_prompt: No limit
     prompt: Generate and share links with others to grant access to this instance
     table:
@@ -754,7 +754,7 @@ en-OU:
       images_and_video: Cannot attach a vid to a status that contains photos
       too_many: You may only attach up to 4 things
   migrations:
-    acct: username@domain of the new account
+    acct: username@domain of account migrating to
     currently_redirecting: 'Your profile is set to redirect to:'
     proceed: Save
     updated_msg: Your account migration setting successfully updated!
@@ -775,25 +775,25 @@ en-OU:
     favourite:
       body: 'Your status got a star from %{name}:'
       subject: "%{name} put a star on your status"
-      title: New favourite
+      title: A star for you
     follow:
       body: "%{name} is now following you!"
       subject: "%{name} is now following you"
-      title: New follower
+      title: An account follows you
     follow_request:
-      action: Manage follow requests
+      action: Look at who wants to follow you
       body: "%{name} wants to follow you"
       subject: 'Follow awaiting confirmation: %{name}'
-      title: New follow request
+      title: An account wants to follow you
     mention:
       action: Toot back
       body: 'You got a tag by %{name} in:'
       subject: You got a tag from %{name}
-      title: New mention
+      title: A tag for you
     reblog:
       body: 'Your status got a boost from %{name}:'
       subject: Your status got a boost from %{name}
-      title: New boost
+      title: A boost for you
   number:
     human:
       decimal_units:
@@ -815,14 +815,14 @@ en-OU:
     truncate: "&hellip;"
   polls:
     errors:
-      already_voted: You have already voted on this poll
-      duplicate_options: contain duplicate items
-      duration_too_long: is too far into the future
+      already_voted: You said your opinion prior to this
+      duplicate_options: contain matching listings
+      duration_too_long: is too far forward from now
       duration_too_short: is too soon
-      expired: The poll has already ended
-      over_character_limit: cannot be longer than %{max} characters each
-      too_few_options: must have more than one item
-      too_many_options: can't contain more than %{max} items
+      expired: The poll ran in the past
+      over_character_limit: can't contain > %{max} glyphs
+      too_few_options: must contain two options at minimum
+      too_many_options: can't contain > %{max} options
   preferences:
     languages: Localizations
     other: Additional
@@ -831,8 +831,8 @@ en-OU:
   relationships:
     activity: Account activity
     dormant: Dormant
-    last_active: Last active
-    most_recent: Most recent
+    last_active: Last activity
+    most_recent: Most now-ish
     moved: Moved
     mutual: Mutual
     primary: Primary
@@ -844,20 +844,20 @@ en-OU:
   remote_follow:
     acct: Add your alias@domain you want to follow from
     missing_resource: Could not find mandatory URL for your account
-    no_account_html: Don't have an account? You can <a href='%{sign_up_path}' target='_blank'>sign up here</a>
+    no_account_html: No account? You can <a href='%{sign_up_path}' target='_blank'>sign up</a>
     proceed: Go to follow
     prompt: 'Do you want to follow:'
     reason_html: "<strong>Why is this step necessary?</strong> <code>%{instance}</code> might not be the server where you are registered, so we need to redirect you to your home server first."
   remote_interaction:
     favourite:
-      proceed: Proceed to favourite
-      prompt: 'You want to favourite this toot:'
+      proceed: Go on and put a star
+      prompt: 'You want to put a star on this toot:'
     reblog:
-      proceed: Proceed to boost
+      proceed: Go on and boost
       prompt: 'You want to boost this toot:'
     reply:
-      proceed: Proceed to reply
-      prompt: 'You want to reply to this toot:'
+      proceed: Go on and toot back
+      prompt: 'You want to toot back to this toot:'
   remote_unfollow:
     error: Mishap
     title: Title
@@ -955,7 +955,7 @@ en-OU:
         other: "%{count} votes"
       vote: Vote
     show_more: Show additional
-    sign_in_to_participate: Sign in to participate in the conversation
+    sign_in_to_participate: Sign in to chat along
     title: '%{name}: "%{quote}"'
     visibilities:
       private: Accounts following-only
@@ -1037,7 +1037,7 @@ en-OU:
       <p>This document is CC-BY-SA. It was last updated May 31, 2013.</p>
 
       <p>Originally adapted from the <a href="https://github.com/discourse/discourse">Discourse privacy policy</a>.</p>
-    title: "%{instance} Terms of Service and Privacy Policy"
+    title: "%{instance} Social Contract and Privacy Policy"
   themes:
     contrast: High contrast
     default: Mastodon
