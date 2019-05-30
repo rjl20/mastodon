@@ -4,34 +4,34 @@ en-OU:
     about_hashtag_html: This is a group of public toots with <strong>#%{hashtag}</strong>. You can play with this if you add an account on any Mastodon instantiation.
     about_mastodon_html: Mastodon is a <em>"FOSS"</em> social sharing hub. A <em>multi-host</em> substitution for capitalistic platforms, it avoids risking a particular company monopolizing your communication. Pick a host that you trust &mdash; you can still talk with all hosts running Mastadon. Any individual can run a Mastodon instantiation and join in this <em>social hub</em> in a jiffy.
     about_this: About
-    active_count_after: active
-    active_footnote: Monthly Active Users (MAU)
+    active_count_after: with activity
+    active_footnote: Monthly Accounts with Activity (MAA)
     administered_by: 'Administrator(s):'
     api: API
     apps: Apps
-    apps_platforms: Use Mastodon from iOS, Android and other platforms
-    browse_directory: Browse a profile directory and filter by interests
-    browse_public_posts: Browse a live stream of public posts on Mastodon
+    apps_platforms: Toot from iOS, Android and similar platforms
+    browse_directory: Find folks ok with finding
+    browse_public_posts: Look at public posts on Mastodon
     contact: Contact
     contact_missing: No contact
     contact_unavailable: N/A
-    discover_users: Discover users
+    discover_users: Who is in this spot?
     documentation: Docs
     extended_description_html: |
       <h3>A good place for rules</h3>
       <p>The extended description has not been set up yet.</p>
-    federation_hint_html: With an account on %{instance} you'll be able to follow people on any Mastodon server and beyond.
+    federation_hint_html: With an account on %{instance} you can follow folks on any Mastodon spot. You just can't talk to folks using that fifth glyph.
     generic_description: "%{domain} is an instantiation in our world"
-    get_apps: Try a mobile app
+    get_apps: Try an app
     hosted_on: Mastodon on %{domain}
     learn_more: Additional info
     privacy_policy: Privacy policy
-    see_whats_happening: See what's happening
-    server_stats: 'Server stats:'
+    see_whats_happening: What's going on?
+    server_stats: 'Instantiation stats:'
     source_code: Github
     status_count_after: things
     status_count_before: Who said
-    tagline: Follow friends and discover new ones
+    tagline: Chatting with pals, writing with a lipogrammatic constraint
     terms: Our ToS
     user_count_after: Oulipians
     user_count_before: Host to
@@ -512,7 +512,7 @@ en-OU:
   auth:
     apply_for_account: Request an invite
     change_password: Modify password
-    checkbox_agreement_html: I agree to the <a href="%{rules_path}" target="_blank">server rules</a> and <a href="%{terms_path}" target="_blank">terms of service</a>
+    checkbox_agreement_html: I will conform with <a href="%{rules_path}" target="_blank">instantiation bylaws</a> and <a href="%{terms_path}" target="_blank">ToS</a>
     confirm_email: Confirm mail
     delete_account: Kill account
     delete_account_html: If you wish to kill your account, you can <a href="%{path}">click this spot</a>. You must confirm.
@@ -533,7 +533,7 @@ en-OU:
     reset_password: Forgot password
     security: Password and such
     set_new_password: Pick a password
-    trouble_logging_in: Trouble logging in?
+    trouble_logging_in: Difficulty logging in?
   authorize_follow:
     already_following: You still follow this account
     error: Sorry, this account was not found
@@ -677,9 +677,9 @@ en-OU:
     new:
       title: Add a filtration control
   footer:
-    developers: Developers
-    more: More…
-    resources: Resources
+    developers: For Coding Folks
+    more: '...'
+    resources: Links
   generic:
     all: All
     changes_saved_msg: Your modifications took!
