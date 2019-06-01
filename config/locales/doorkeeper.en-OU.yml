@@ -12,7 +12,7 @@ en-OU:
         doorkeeper/application:
           attributes:
             redirect_uri:
-              fragment_present: cannot contain a fragment.
+              fragment_present: cannot contain a partial URL.
               invalid_uri: must be a valid URI.
               relative_uri: must be an absolute URI.
               secured_uri: must be an HTTPS/SSL URI.
@@ -37,7 +37,7 @@ en-OU:
       index:
         application: Application
         callback_url: Callback URL
-        delete: Delete
+        delete: Discard
         name: Name
         new: New application
         scopes: Scopes

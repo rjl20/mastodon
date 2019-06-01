@@ -842,12 +842,12 @@ en-OU:
     remove_selected_follows: Unfollow selected users
     status: Account status
   remote_follow:
-    acct: Add your alias@domain you want to follow from
+    acct: Add your alias@domain you want to act as
     missing_resource: Could not find mandatory URL for your account
     no_account_html: No account? You can <a href='%{sign_up_path}' target='_blank'>sign up</a>
     proceed: Go to follow
     prompt: 'Do you want to follow:'
-    reason_html: "<strong>Why is this step necessary?</strong> <code>%{instance}</code> might not be the server where you are registered, so we need to redirect you to your home server first."
+    reason_html: "<strong>Why do this?</strong> If <code>%{instance}</code> isn't your primary Mastodon host, you must go through that host first."
   remote_interaction:
     favourite:
       proceed: Go on and put a star
