@@ -36,7 +36,7 @@ en-OU:
         setting_default_language: The language of your toots can be detected automatically, but it's not always accurate
         setting_display_media_default: Hide media marked as sensitive
         setting_display_media_hide_all: Always hide all media
-        setting_display_media_show_all: Always show media marked as sensitive
+        setting_display_media_show_all: Always display posts with a "tricky topic" tag
         setting_hide_network: Who you follow and who follows you will stay in hiding on your bio
         setting_noindex: This is for your public bio and toots
         setting_show_application: The application you use to toot will be displayed in the detailed view of your toots
