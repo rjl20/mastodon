@@ -2,6 +2,9 @@
 en-OU:
   activerecord:
     attributes:
+      poll:
+        expires_at: Closing at
+        options: Options
       status:
         text: Status
     errors:
