@@ -29,7 +29,7 @@ en-OU:
         note:
           one: <span class="note-counter">1</span> glyph to go
           other: <span class="note-counter">%{count}</span> glyphs to go
-        password: Use at least 8 characters
+        password: Password must contain a minimum of 8 symbols
         phrase: Will be matched regardless of casing in text or content warning of a toot
         scopes: Which APIs the application will be allowed to access. If you select a top-level scope, you don't need to select individual ones.
         setting_aggregate_reblogs: Do not show new boosts for toots that have been recently boosted (only affects newly-received boosts)
