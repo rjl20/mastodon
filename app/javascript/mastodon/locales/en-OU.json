@@ -258,7 +258,7 @@
   "notifications.column_settings.filter_bar.show": "Show",
   "notifications.column_settings.follow": "Accounts following:",
   "notifications.column_settings.mention": "Tags:",
-  "notifications.column_settings.poll": "Poll results:",
+  "notifications.column_settings.poll": "Polling activity:",
   "notifications.column_settings.push": "Push notifications",
   "notifications.column_settings.reblog": "Boosts:",
   "notifications.column_settings.show": "Show in column",
