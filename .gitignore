@@ -60,3 +60,6 @@ docker-compose.override.yml
 
 # Ignore oulipo maintenance page
 public/maintenance.html*
+
+# Ignore translations tsv file
+public/translations.tsv
