@@ -141,6 +141,7 @@ en-OU:
         reblog: Mail if anybody boosts your status
         report: Send e-mail when a new report is submitted
     'no': 'No'
+    recommended: A good option
     required:
       mark: "*"
       text: mandatory
