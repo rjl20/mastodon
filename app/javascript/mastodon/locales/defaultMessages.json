@@ -569,6 +569,10 @@
         "id": "account.follow"
       },
       {
+        "defaultMessage": "Cancel follow request",
+        "id": "account.cancel_follow_request"
+      },
+      {
         "defaultMessage": "Awaiting approval. Click to cancel follow request",
         "id": "account.requested"
       },
@@ -795,6 +799,10 @@
       {
         "defaultMessage": "Muted words",
         "id": "navigation_bar.filters"
+      },
+      {
+        "defaultMessage": "Logout",
+        "id": "navigation_bar.logout"
       }
     ],
     "path": "app/javascript/mastodon/features/compose/components/action_bar.json"
@@ -1003,6 +1011,10 @@
       {
         "defaultMessage": "Toots",
         "id": "search_results.statuses"
+      },
+      {
+        "defaultMessage": "Searching toots by their content is not enabled on this Mastodon server.",
+        "id": "search_results.statuses_fts_disabled"
       },
       {
         "defaultMessage": "Hashtags",
