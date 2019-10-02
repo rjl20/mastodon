@@ -21,7 +21,7 @@ class StreamEntriesController < ApplicationController
       end
 
       format.atom do
-        expires_in 3.minutes, public: true unless @stream_entry.hidden?
+        expires_in 3.minutes, public: true unless @stream_entry.hidden? || @stream_entry.local_only?
 
         render xml: OStatus::AtomSerializer.render(OStatus::AtomSerializer.new.entry(@stream_entry, true))
       end
@@ -52,7 +52,7 @@ class StreamEntriesController < ApplicationController
     @type         = 'status'
 
     raise ActiveRecord::RecordNotFound if @stream_entry.activity.nil?
-    authorize @stream_entry.activity, :show? if @stream_entry.hidden?
+    authorize @stream_entry.activity, :show? if @stream_entry.hidden? || @stream_entry.local_only?
   rescue Mastodon::NotPermittedError
     # Reraise in order to get a 404
     raise ActiveRecord::RecordNotFound

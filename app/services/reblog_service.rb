@@ -24,8 +24,11 @@ class ReblogService < BaseService
     reblog = account.statuses.create!(reblog: reblogged_status, text: '', visibility: visibility)
 
     DistributionWorker.perform_async(reblog.id)
-    Pubsubhubbub::DistributionWorker.perform_async(reblog.stream_entry.id)
-    ActivityPub::DistributionWorker.perform_async(reblog.id)
+
+    unless reblogged_status.local_only?
+      Pubsubhubbub::DistributionWorker.perform_async(reblog.stream_entry.id)
+      ActivityPub::DistributionWorker.perform_async(reblog.id)
+    end
 
     create_notification(reblog)
     bump_potential_friendship(account, reblog)
