@@ -937,7 +937,7 @@ en-OU:
     notifications: Notifications
     preferences: Options
     profile: Profile
-    relationships: Follows and followings
+    relationships: Followings
     two_factor_authentication: Two-factor Auth
   statuses:
     attached:
