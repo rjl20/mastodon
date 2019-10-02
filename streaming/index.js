@@ -375,6 +375,12 @@ const startWorker = (workerId) => {
         return;
       }
 
+      // Only send local-only statuses to logged-in users
+      if (payload.local_only && !req.accountId) {
+        log.silly(req.requestId, `Message ${payload.id} filtered because it was local-only`);
+        return;
+      }
+
       // Only messages that may require filtering are statuses, since notifications
       // are already personalized and deletes do not matter
       if (!needsFiltering || event !== 'update') {
@@ -672,7 +678,7 @@ const attachServerWithConfig = (server, onSuccess) => {
       }
     });
   } else {
-    server.listen(+process.env.PORT || 4000, process.env.BIND || '0.0.0.0', () => {
+    server.listen(+process.env.PORT || 4000, process.env.BIND || '127.0.0.1', () => {
       if (onSuccess) {
         onSuccess(`${server.address().address}:${server.address().port}`);
       }

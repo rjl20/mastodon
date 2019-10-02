@@ -322,6 +322,10 @@
         "id": "status.cannot_reblog"
       },
       {
+        "defaultMessage": "This post is only visible by other users of your instance",
+        "id": "status.local_only"
+      },
+      {
         "defaultMessage": "Favourite",
         "id": "status.favourite"
       },
@@ -569,6 +573,10 @@
         "id": "account.follow"
       },
       {
+        "defaultMessage": "Cancel follow request",
+        "id": "account.cancel_follow_request"
+      },
+      {
         "defaultMessage": "Awaiting approval. Click to cancel follow request",
         "id": "account.requested"
       },
@@ -795,6 +803,10 @@
       {
         "defaultMessage": "Muted words",
         "id": "navigation_bar.filters"
+      },
+      {
+        "defaultMessage": "Logout",
+        "id": "navigation_bar.logout"
       }
     ],
     "path": "app/javascript/mastodon/features/compose/components/action_bar.json"
@@ -880,6 +892,31 @@
       }
     ],
     "path": "app/javascript/mastodon/features/compose/components/emoji_picker_dropdown.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Federated",
+        "id": "federation.federated.short"
+      },
+      {
+        "defaultMessage": "Allow toot to reach other instances",
+        "id": "federation.federated.long"
+      },
+      {
+        "defaultMessage": "Local-only",
+        "id": "federation.local_only.short"
+      },
+      {
+        "defaultMessage": "Restrict this toot only to my instance",
+        "id": "federation.local_only.long"
+      },
+      {
+        "defaultMessage": "Adjust status federation",
+        "id": "federation.change"
+      }
+    ],
+    "path": "app/javascript/mastodon/features/compose/components/federation_dropdown.json"
   },
   {
     "descriptors": [
@@ -1003,6 +1040,10 @@
       {
         "defaultMessage": "Toots",
         "id": "search_results.statuses"
+      },
+      {
+        "defaultMessage": "Searching toots by their content is not enabled on this Mastodon server.",
+        "id": "search_results.statuses_fts_disabled"
       },
       {
         "defaultMessage": "Hashtags",
@@ -2023,6 +2064,15 @@
       }
     ],
     "path": "app/javascript/mastodon/features/status/components/action_bar.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "This post is only visible by other users of your instance",
+        "id": "status.local_only"
+      }
+    ],
+    "path": "app/javascript/mastodon/features/status/components/detailed_status.json"
   },
   {
     "descriptors": [

@@ -33,7 +33,9 @@ en-OU:
         phrase: Will be matched regardless of casing in text or content warning of a toot
         scopes: Which APIs the application will be allowed to access. If you select a top-level scope, you don't need to select individual ones.
         setting_aggregate_reblogs: Do not show new boosts for toots that have been recently boosted (only affects newly-received boosts)
+        setting_default_federation: Toots do not transmit off this instantiation normally, but can do so if you allow it during composition
         setting_default_language: The language of your toots can be detected automatically, but it's not always accurate
+        setting_default_sensitive: Sensitive media is hidden by default and can be revealed with a click
         setting_display_media_default: Hide media marked as sensitive
         setting_display_media_hide_all: Always hide all media
         setting_display_media_show_all: Always display posts with a "tricky topic" tag
@@ -98,9 +100,11 @@ en-OU:
         otp_attempt: Two-factor digits
         password: Password
         phrase: Keyword or phrase
+        setting_advanced_layout: Enable advanced web interface
         setting_aggregate_reblogs: Group boosts in timelines
         setting_auto_play_gif: Auto-play GIFs
         setting_boost_modal: Show confirmation dialog prior to boosting
+        setting_default_federation: Allow my toots to reach other instances by default
         setting_default_language: Posting language
         setting_default_privacy: Post privacy
         setting_default_sensitive: Always mark pics as tricky

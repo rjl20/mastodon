@@ -166,6 +166,7 @@ en-OU:
       statuses: Statuses
       subscribe: Subscribe
       suspended: Suspended
+      time_in_queue: Waiting in queue %{time}
       title: Accounts
       unconfirmed_email: Unconfirmed E-mail
       undo_silenced: Undo silence
@@ -494,6 +495,12 @@ en-OU:
       body: "%{reporter} has reported %{target}"
       body_remote: Someone from %{domain} has reported %{target}
       subject: New report for %{instance} (#%{id})
+  appearance:
+    advanced_web_interface: Advanced web interface
+    advanced_web_interface_hint: 'If you want to make use of your entire screen width, the advanced web interface allows you to configure many different columns to see as much information at the same time as you want: Home, notifications, federated timeline, any number of lists and hashtags.'
+    animations_and_accessibility: Animations and accessibility
+    confirmation_dialogs: Confirmation dialogs
+    sensitive_content: Sensitive content
   application_mailer:
     notification_preferences: Modify mail options
     salutation: "%{name},"
@@ -626,6 +633,8 @@ en-OU:
     people:
       one: "%{count} individual"
       other: "%{count} individuals"
+  domain_validator:
+    invalid_domain: is not a valid domain name
   errors:
     '403': You may not look at this spot.
     '404': Nothing to display at this URL.
@@ -826,6 +835,8 @@ en-OU:
   preferences:
     languages: Localizations
     other: Additional
+    posting_defaults: Posting defaults
+    public_timelines: Public timelines
     publishing: Publishing
     web: Display
   relationships:
@@ -942,6 +953,7 @@ en-OU:
       one: 'contains an ungood hashtag: %{tags}'
       other: 'contains ungood hashtags: %{tags}'
     language_detection: Automatically detect language
+    local_only: Local-only
     open_in_web: Go to http location
     over_character_limit: past symbol limit of %{max}
     pin_errors:

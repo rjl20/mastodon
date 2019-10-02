@@ -588,6 +588,8 @@ en:
     people:
       one: "%{count} person"
       other: "%{count} people"
+  domain_validator:
+    invalid_domain: is not a valid domain name
   errors:
     '403': You don't have permission to view this page.
     '404': The page you are looking for isn't here.
@@ -901,6 +903,7 @@ en:
       one: 'contained a disallowed hashtag: %{tags}'
       other: 'contained the disallowed hashtags: %{tags}'
     language_detection: Automatically detect language
+    local_only: Local-only
     open_in_web: Open in web
     over_character_limit: character limit of %{max} exceeded
     pin_errors:
