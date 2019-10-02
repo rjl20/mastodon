@@ -953,6 +953,7 @@ en-OU:
       one: 'contains an ungood hashtag: %{tags}'
       other: 'contains ungood hashtags: %{tags}'
     language_detection: Automatically detect language
+    local_only: Local-only
     open_in_web: Go to http location
     over_character_limit: past symbol limit of %{max}
     pin_errors:
