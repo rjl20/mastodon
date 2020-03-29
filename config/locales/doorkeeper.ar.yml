@@ -38,6 +38,7 @@ ar:
         application: تطبيق
         callback_url: رابط رد النداء
         delete: حذف
+        empty: ليس لديك أية تطبيقات.
         name: التسمية
         new: تطبيق جديد
         scopes: المجالات
@@ -113,11 +114,17 @@ ar:
       application:
         title: طلب تصريح مفتوح OAuth
     scopes:
+      admin:read: قراءة كافة البيانات على الخادم
+      admin:read:accounts: قراءة المعلومات الحساسة عن كافة الحسابات
+      admin:write: تعديل كافة البيانات على الخادم
+      admin:write:accounts: اتخاذ إجراءات إشراف على الحسابات
+      admin:write:reports: اتخاذ إجراءات إشراف على الإبلاغات
       follow: تعديل علاقات الحساب
       push: تلقي إشعاراتك
       read: قراءة كافة بيانات حسابك
       read:accounts: معاينة معلومات الحساب
       read:blocks: رؤية الحسابات التي قمت بحجبها
+      read:bookmarks: اطّلع على فواصلك المرجعية
       read:favourites: رؤية مفضلاتك
       read:filters: رؤية عوامل التصفية الخاصة بك
       read:follows: رؤية متابِعيك
@@ -128,8 +135,9 @@ ar:
       read:search: البحث مكانك
       read:statuses: رؤية كافة المنشورات
       write: تغيير كافة بيانات حسابك
-      write:accounts: تعديل ملفك الشخصي
+      write:accounts: تعديل صفحتك التعريفية
       write:blocks: حجب الحسابات و النطاقات
+      write:bookmarks: الإحتفاظ بالمنشورات في الفواصل المرجعية
       write:favourites: الإعجاب بمنشورات
       write:filters: إنشاء عوامل تصفية
       write:follows: متابَعة الأشخاص

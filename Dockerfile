@@ -3,23 +3,21 @@ FROM ubuntu:18.04 as build-dep
 # Use bash for the shell
 SHELL ["bash", "-c"]
 
-# Install Node
-ENV NODE_VER="8.15.0"
+# Install Node v12 (LTS)
+ENV NODE_VER="12.14.0"  
 RUN	echo "Etc/UTC" > /etc/localtime && \
 	apt update && \
-	apt -y install wget make gcc g++ python && \
+	apt -y install wget python && \
 	cd ~ && \
-	wget https://nodejs.org/download/release/v$NODE_VER/node-v$NODE_VER.tar.gz && \
-	tar xf node-v$NODE_VER.tar.gz && \
-	cd node-v$NODE_VER && \
-	./configure --prefix=/opt/node && \
-	make -j$(nproc) > /dev/null && \
-	make install
+	wget https://nodejs.org/download/release/v$NODE_VER/node-v$NODE_VER-linux-x64.tar.gz && \
+	tar xf node-v$NODE_VER-linux-x64.tar.gz && \
+	rm node-v$NODE_VER-linux-x64.tar.gz && \
+	mv node-v$NODE_VER-linux-x64 /opt/node
 
 # Install jemalloc
-ENV JE_VER="5.1.0"
+ENV JE_VER="5.2.1"
 RUN apt update && \
-	apt -y install autoconf && \
+	apt -y install make autoconf gcc g++ && \
 	cd ~ && \
 	wget https://github.com/jemalloc/jemalloc/archive/$JE_VER.tar.gz && \
 	tar xf $JE_VER.tar.gz && \
@@ -30,7 +28,7 @@ RUN apt update && \
 	make install_bin install_include install_lib
 
 # Install ruby
-ENV RUBY_VER="2.6.1"
+ENV RUBY_VER="2.6.5"
 ENV CPPFLAGS="-I/opt/jemalloc/include"
 ENV LDFLAGS="-L/opt/jemalloc/lib/"
 RUN apt update && \
@@ -60,7 +58,9 @@ RUN npm install -g yarn && \
 COPY Gemfile* package.json yarn.lock /opt/mastodon/
 
 RUN cd /opt/mastodon && \
-	bundle install -j$(nproc) --deployment --without development test && \
+  bundle config set deployment 'true' && \
+  bundle config set without 'development test' && \
+	bundle install -j$(nproc) && \
 	yarn install --pure-lockfile
 
 FROM ubuntu:18.04
@@ -125,3 +125,4 @@ RUN cd ~ && \
 # Set the work dir and the container entry point
 WORKDIR /opt/mastodon
 ENTRYPOINT ["/tini", "--"]
+EXPOSE 3000 4000

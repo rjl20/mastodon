@@ -26,6 +26,7 @@ const toServerSideType = columnType => {
   case 'notifications':
   case 'public':
   case 'thread':
+  case 'account':
     return columnType;
   default:
     if (columnType.indexOf('list:') > -1) {
@@ -128,6 +129,7 @@ export const getAlerts = createSelector([getAlertsBase], (base) => {
   base.forEach(item => {
     arr.push({
       message: item.get('message'),
+      message_values: item.get('message_values'),
       title: item.get('title'),
       key: item.get('key'),
       dismissAfter: 5000,

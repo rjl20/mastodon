@@ -9,10 +9,6 @@ he:
     contact_missing: ללא הגדרה
     contact_unavailable: לא רלוונטי/חסר
     documentation: תיעוד
-    extended_description_html: |
-      <h3>מקום טוב לכללים</h3>
-      <p>התיאור המורחב טרם הוגדר.</p>
-    generic_description: "%{domain} הוא שרת אחד בתוך הרשת"
     hosted_on: מסטודון שיושב בכתובת %{domain}
     learn_more: מידע נוסף
     source_code: קוד מקור
@@ -56,9 +52,7 @@ he:
       email_status: סטטוס דוא"ל
       enable: לאפשר
       enabled: מאופשר
-      feed_url: כתובת פיד
       followers: עוקבים
-      followers_url: כתובת עוקבים
       follows: נעקבים
       inbox_url: כתובת תיבה נכנסת
       ip: כתובת IP
@@ -79,9 +73,7 @@ he:
       most_recent_activity: פעילות עדכנית
       most_recent_ip: כתובות אחרונות
       not_subscribed: לא רשום
-      outbox_url: כתובת תיבת דואר יוצא
       perform_full_suspension: ביצוע השעייה מלאה
-      profile_url: כתובת פרופיל
       promote: להעלות בדרגה
       protocol: פרטיכל
       public: פומבי
@@ -99,7 +91,6 @@ he:
         admin: מנהל מערכת
         moderator: מנחה דיונים
         user: משתמש(ת)
-      salmon_url: כתובת סלמון
       search: חיפוש
       shared_inbox_url: תיבה משותפת לדואר נכנס
       show:
@@ -177,13 +168,6 @@ he:
         title: תיאור אתר מורחב
       site_title: כותרת האתר
       title: הגדרות אתר
-    subscriptions:
-      callback_url: קישורית Callback
-      confirmed: מאושר
-      expires_in: פג תוקף ב-
-      last_delivery: משלוח אחרון
-      title: מנוי WebSub
-      topic: נושא
     title: ניהול
   application_mailer:
     settings: 'שינוי הגדרות דוא"ל: %{link}'
@@ -219,17 +203,19 @@ he:
       x_months: "%{count} חודשים"
       x_seconds: "%{count} שניות"
   errors:
+    '400': The request you submitted was invalid or malformed.
     '403': חסרות לך הרשאות לצפיה בעמוד זה.
     '404': הדף המבוקש לא קיים.
+    '406': This page is not available in the requested format.
     '410': הדף המבוקש כבר לא קיים.
     '422':
       content: בדיקת אבטחה נכשלה. החסמת עוגיותיך מפנינו?
       title: בדיקת בטיחות נכשלה
     '429': הוחנק
     '500': 
+    '503': The page could not be served due to a temporary server failure.
   exports:
     blocks: רשימת חסימות
-    follows: רשימת נעקבים
     mutes: רשימת השתקות
     storage: אחסון מדיה
   generic:

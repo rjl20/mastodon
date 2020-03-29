@@ -46,10 +46,7 @@ class Rack::Attack
 
   PROTECTED_PATHS_REGEX = Regexp.union(PROTECTED_PATHS.map { |path| /\A#{Regexp.escape(path)}/ })
 
-  # Always allow requests from localhost
-  # (blocklist & throttles are skipped)
   Rack::Attack.safelist('allow from localhost') do |req|
-    # Requests are allowed if the return value is truthy
     req.remote_ip == '127.0.0.1' || req.remote_ip == '::1'
   end
 
@@ -65,7 +62,7 @@ class Rack::Attack
     req.authenticated_user_id if req.post? && req.path.start_with?('/api/v1/media')
   end
 
-  throttle('throttle_media_proxy', limit: 30, period: 30.minutes) do |req|
+  throttle('throttle_media_proxy', limit: 30, period: 10.minutes) do |req|
     req.remote_ip if req.path.start_with?('/media_proxy')
   end
 

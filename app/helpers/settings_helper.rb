@@ -10,6 +10,7 @@ module SettingsHelper
     ast: 'Asturianu',
     bg: 'Български',
     bn: 'বাংলা',
+    br: 'Breton',
     ca: 'Català',
     co: 'Corsu',
     cs: 'Čeština',
@@ -17,8 +18,11 @@ module SettingsHelper
     da: 'Dansk',
     de: 'Deutsch',
     el: 'Ελληνικά',
+    en: 'English',
     eo: 'Esperanto',
+    'es-AR': 'Español (Argentina)',
     es: 'Español',
+    et: 'Eesti',
     eu: 'Euskara',
     fa: 'فارسی',
     fi: 'Suomi',
@@ -32,38 +36,46 @@ module SettingsHelper
     hy: 'Հայերեն',
     id: 'Bahasa Indonesia',
     io: 'Ido',
+    is: 'Íslenska',
     it: 'Italiano',
     ja: '日本語',
     ka: 'ქართული',
+    kab: 'Taqbaylit',
     kk: 'Қазақша',
+    kn: 'ಕನ್ನಡ',
     ko: '한국어',
     lt: 'Lietuvių',
     lv: 'Latviešu',
+    mk: 'Македонски',
     ml: 'മലയാളം',
+    mr: 'मराठी',
     ms: 'Bahasa Melayu',
     nl: 'Nederlands',
+    nn: 'Nynorsk',
     no: 'Norsk',
     oc: 'Occitan',
     pl: 'Polski',
+    'pt-BR': 'Português (Brasil)',
+    'pt-PT': 'Português (Portugal)',
     pt: 'Português',
-    'pt-BR': 'Português do Brasil',
     ro: 'Română',
     ru: 'Русский',
     sk: 'Slovenčina',
     sl: 'Slovenščina',
     sq: 'Shqip',
-    sr: 'Српски',
     'sr-Latn': 'Srpski (latinica)',
+    sr: 'Српски',
     sv: 'Svenska',
     ta: 'தமிழ்',
     te: 'తెలుగు',
     th: 'ไทย',
     tr: 'Türkçe',
     uk: 'Українська',
-    zh: '中文',
+    ur: 'اُردُو',
     'zh-CN': '简体中文',
     'zh-HK': '繁體中文（香港）',
     'zh-TW': '繁體中文（臺灣）',
+    zh: '中文',
 =end
   }.freeze
 
@@ -88,6 +100,14 @@ module SettingsHelper
       'tablet'
     else
       'desktop'
+    end
+  end
+
+  def compact_account_link_to(account)
+    return if account.nil?
+
+    link_to ActivityPub::TagManager.instance.url_for(account), class: 'name-tag', title: account.acct do
+      safe_join([image_tag(account.avatar.url, width: 15, height: 15, alt: display_name(account), class: 'avatar'), content_tag(:span, account.acct, class: 'username')], ' ')
     end
   end
 end

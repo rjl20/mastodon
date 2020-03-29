@@ -46,6 +46,8 @@ class Formatter
 
   def reformat(html)
     sanitize(html, Sanitize::Config::MASTODON_STRICT)
+  rescue ArgumentError
+    ''
   end
 
   def plaintext(status)
@@ -84,8 +86,7 @@ class Formatter
   end
 
   def format_field(account, str, **options)
-    return reformat(str).html_safe unless account.local? # rubocop:disable Rails/OutputSafety
-    html = encode_and_link_urls(str, me: true)
+    html = account.local? ? encode_and_link_urls(str, me: true) : reformat(str)
     html = encode_custom_emojis(html, account.emojis, options[:autoplay]) if options[:custom_emojify]
     html.html_safe # rubocop:disable Rails/OutputSafety
   end
@@ -246,13 +247,14 @@ class Formatter
     end
 
     standard = Extractor.extract_entities_with_indices(text, options)
+    extra = Extractor.extract_extra_uris_with_indices(text, options)
 
-    Extractor.remove_overlapping_entities(special + standard)
+    Extractor.remove_overlapping_entities(special + standard + extra)
   end
 
   def link_to_url(entity, options = {})
     url        = Addressable::URI.parse(entity[:url])
-    html_attrs = { target: '_blank', rel: 'nofollow noopener' }
+    html_attrs = { target: '_blank', rel: 'nofollow noopener noreferrer' }
 
     html_attrs[:rel] = "me #{html_attrs[:rel]}" if options[:me]
 
@@ -285,7 +287,7 @@ class Formatter
 
   def link_html(url)
     url    = Addressable::URI.parse(url).to_s
-    prefix = url.match(/\Ahttps?:\/\/(www\.)?/).to_s
+    prefix = url.match(/\A(https?:\/\/(www\.)?|xmpp:)/).to_s
     text   = url[prefix.length, 30]
     suffix = url[prefix.length + 30..-1]
     cutoff = url[prefix.length..-1].length > 30
@@ -294,10 +296,10 @@ class Formatter
   end
 
   def hashtag_html(tag)
-    "<a href=\"#{encode(tag_url(tag.downcase))}\" class=\"mention hashtag\" rel=\"tag\">#<span>#{encode(tag)}</span></a>"
+    "<a href=\"#{encode(tag_url(tag))}\" class=\"mention hashtag\" rel=\"tag\">#<span>#{encode(tag)}</span></a>"
   end
 
   def mention_html(account)
-    "<span class=\"h-card\"><a href=\"#{encode(TagManager.instance.url_for(account))}\" class=\"u-url mention\">@<span>#{encode(account.username)}</span></a></span>"
+    "<span class=\"h-card\"><a href=\"#{encode(ActivityPub::TagManager.instance.url_for(account))}\" class=\"u-url mention\">@<span>#{encode(account.username)}</span></a></span>"
   end
 end

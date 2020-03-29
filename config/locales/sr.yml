@@ -9,10 +9,6 @@ sr:
     contact: Контакт
     contact_missing: Није постављено
     documentation: Документација
-    extended_description_html: |
-      <h3>Добро место за правила</h3>
-      <p>Проширени опис који још није постављен.</p>
-    generic_description: "%{domain} је сервер на мрежи"
     hosted_on: Мастодонт хостован на %{domain}
     learn_more: Сазнајте више
     privacy_policy: Полиса приватности
@@ -95,9 +91,7 @@ sr:
       email_status: Статус е-поште
       enable: Омогући
       enabled: Укључено
-      feed_url: Адреса довода
       followers: Пратиоци
-      followers_url: Адреса пратиоца
       follows: Праћени
       header: Заглавље
       inbox_url: Адреса сандучета
@@ -122,9 +116,7 @@ sr:
       most_recent_ip: Најскорија IP адреса
       no_limits_imposed: Нема ограничења
       not_subscribed: Није претплаћен
-      outbox_url: Одлазно сандуче
       perform_full_suspension: Искључи
-      profile_url: Адреса профила
       promote: Унапреди
       protocol: Протокол
       public: Јавно
@@ -145,7 +137,6 @@ sr:
         moderator: Модератор
         staff: Особље
         user: Корисник
-      salmon_url: Salmon адреса
       search: Претрага
       shared_inbox_url: Адреса дељеног сандучета
       show:
@@ -289,9 +280,6 @@ sr:
         create: Додај домен
         title: Нова ставка е-поштe у црној листи
       title: Црна листа E-поште
-    followers:
-      back_to_account: Назад на налог
-      title: "%{acct} Пратиоци"
     instances:
       delivery_available: Достава је доступна
       known_accounts:
@@ -334,9 +322,6 @@ sr:
       created_msg: Белешка пријаве успешно направљена!
       destroyed_msg: Белешка пријаве успешно избрисана!
     reports:
-      account:
-        note: белешка
-        report: извештај
       action_taken_by: Акцију извео
       are_you_sure: Да ли сте сигурни?
       assign_to_self: Додели мени
@@ -440,18 +425,8 @@ sr:
       no_status_selected: Ниједан статус није промењен јер ниједан није изабран
       title: Статуси налога
       with_media: Са мултимедијом
-    subscriptions:
-      confirmed: Потврђено
-      expires_in: Истиче за
-      last_delivery: Последња достава
     tags:
-      accounts: Налози
-      hidden: Скривено
-      hide: Сакриј од фасцикле
-      name: Тараба
       title: Тараба
-      unhide: Прикажи у фасцикли
-      visible: Видљиво
     title: Администрација
     warning_presets:
       add_new: Додај нови
@@ -480,7 +455,6 @@ sr:
     your_token: Ваш приступни токен
   auth:
     change_password: Лозинка
-    confirm_email: Потврдите адресу е-поште
     delete_account: Обриши налог
     delete_account_html: Ако желите да обришете Ваш налог, можете <a href="%{path}">наставити овде</a>. Бићете упитани да потврдите.
     didnt_get_confirmation: Нисте добили поруку са упутствима за потврду налога?
@@ -521,25 +495,18 @@ sr:
       x_days: "%{count}д"
       x_months: "%{count}месец"
   deletes:
-    bad_password_msg: Добар покушај, хакери! Неисправна лозинка
     confirm_password: Унесите тренутну лозинку да бисмо проверили Ваш идентитет
-    description_html: Ово ће <strong>трајно, бесповратно</strong> уклонити садржај са Вашеф налога и деактивирати га. Ваше корисничко име ће остати резервисано да се спречи да се неко не представља као Ви сутра.
     proceed: Обриши налог
     success_msg: Ваш налог је успешно обрисан
-    warning_html: Гарантовано је само брисање садржаја са ове инстанце. Садржај који је дељен даље ће вероватно да остави неке трагове. Недоступни и угашени сервери, као и сервери који су одјављени од примања статуса од Вас, неће ажурирати своје базе.
-    warning_title: Доступност расејаног садржаја
   directories:
     directory: Профил фасцикле
-    enabled: Ви сте тренутно видљиви у фасцикли.
     explanation: Откријте кориснике на основу њихових интереса
     explore_mastodon: Истражи %{title}
-    people:
-      few: "%{count} људе"
-      one: "%{count} особа/е"
-      other: "%{count} људи"
   errors:
+    '400': The request you submitted was invalid or malformed.
     '403': Немате дозвола да видите ову страну.
     '404': Страна коју сте тражили не постоји.
+    '406': This page is not available in the requested format.
     '410': Страна коју сте тражили више не постоји.
     '422':
       content: Безбедоносна провера није успела. Да не блокирате колачиће?
@@ -548,6 +515,7 @@ sr:
     '500':
       content: Извињавамо се, нешто је пошло по злу са ове стране.
       title: Страна није исправна
+    '503': The page could not be served due to a temporary server failure.
     noscript_html: Да бисте користили Мастодонт веб апликацију, омогућите JavaScript. У супротном, пробајте неку од <a href="%{apps_path}">оригиналних апликација</a> за Мастодонт за Вашу платформу.
   exports:
     archive_takeout:
@@ -559,7 +527,6 @@ sr:
       size: Величина
     blocks: Блокирали сте
     domain_blocks: Блокови домена
-    follows: Пратите
     lists: Листе
     mutes: Ућуткали сте
     storage: Мултимедијално складиште
@@ -631,9 +598,6 @@ sr:
       too_many: Не може се прикачити више од 4 фајла
   migrations:
     acct: корисник@домен новог налога
-    currently_redirecting: 'Профил Вам је подешен да преусмерава на :'
-    proceed: Сачувај
-    updated_msg: Пребацивање поставки Вашег налога успешно измењено!
   moderation:
     title: Модерација
   notification_mailer:
@@ -693,10 +657,6 @@ sr:
     reply:
       proceed: Наставите да бисте одговорили
       prompt: 'Желите да одговорите на ову трубу:'
-  remote_unfollow:
-    error: Грешка
-    title: Наслов
-    unfollowed: Отпраћени
   scheduled_statuses:
     over_daily_limit: Прекорачили сте границу од %{limit} планираних труба за тај дан
     over_total_limit: Прекорачили сте границу од %{limit} планираних труба
