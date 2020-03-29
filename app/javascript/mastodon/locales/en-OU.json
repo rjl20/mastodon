@@ -43,7 +43,7 @@
   "alert.rate_limited.title": "Rate limited",
   "alert.unexpected.message": "Without anticipation, a fault occurs.",
   "alert.unexpected.title": "Oops!",
-  "announcement.announcement": "Announcement",
+  "announcement.announcement": "Proclamation",
   "autosuggest_hashtag.per_week": "{count} per week",
   "boost_modal.combo": "You can hit {combo} to always skip this",
   "bundle_column_error.body": "Could not load this unit.",
