@@ -11,7 +11,7 @@ en-OU:
     apps: Apps
     apps_platforms: Toot from iOS, Android and similar platforms
     browse_directory: Find folks ok with finding
-    browse_local_posts: Browse a live stream of public posts from this server
+    browse_local_posts:  Look at local public posts 
     browse_public_posts: Look at public posts on Mastodon
     contact: Contact
     contact_missing: No contact
@@ -98,12 +98,12 @@ en-OU:
       avatar: Avatar
       by_domain: Domain
       change_email:
-        changed_msg: Account email successfully changed!
-        current_email: Current Email
-        label: Change Email
-        new_email: New Email
-        submit: Change Email
-        title: Change Email for %{username}
+        changed_msg: Account mail successfully changed!
+        current_email: Current Mail
+        label: Modify Mail
+        new_email: New Mail
+        submit: Modify Mail
+        title: Modify Mail for %{username}
       confirm: Confirm
       confirmed: Thank you!
       confirming: Confirming
