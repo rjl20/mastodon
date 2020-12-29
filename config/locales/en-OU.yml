@@ -42,8 +42,11 @@ en-OU:
       domain: Server
       reason: Reason
       rejecting_media: 'Media files from these servers will not be processed or stored, and no thumbnails will be displayed, requiring manual click-through to the original file:'
+      rejecting_media_title: Filtered media
       silenced: 'Posts from these servers will be hidden in public timelines and conversations, and no notifications will be generated from their users'' interactions, unless you are following them:'
+      silenced_title: Silenced servers
       suspended: 'No data from these servers will be processed, stored or exchanged, making any interaction or communication with users from these servers impossible:'
+      suspended_title: Suspended servers
     unavailable_content_html: Mastodon generally allows you to view content from and interact with users from any other server in the fediverse. These are the exceptions that have been made on this particular server.
     user_count_after: Oulipians
     user_count_before: Host to
@@ -88,6 +91,7 @@ en-OU:
       delete: Discard
       destroyed_msg: Moderation note successfully destroyed!
     accounts:
+      add_email_domain_block: Block e-mail domain
       approve: Approve
       approve_all: Approve all
       are_you_sure: Do you want to do this?
@@ -173,6 +177,7 @@ en-OU:
         user: User
       salmon_url: Salmon URL
       search: Search
+      search_same_email_domain: Other users with the same e-mail domain
       search_same_ip: Other users with the same IP
       shared_inbox_url: Shared Inbox URL
       show:
@@ -194,6 +199,42 @@ en-OU:
       web: Web
       whitelisted: Whitelisted
     action_logs:
+      action_types:
+        assigned_to_self_report: Assign Report
+        change_email_user: Change E-mail for User
+        confirm_user: Confirm User
+        create_account_warning: Create Warning
+        create_announcement: Create Announcement
+        create_custom_emoji: Create Custom Emoji
+        create_domain_allow: Create Domain Allow
+        create_domain_block: Create Domain Block
+        create_email_domain_block: Create E-mail Domain Block
+        demote_user: Demote User
+        destroy_announcement: Delete Announcement
+        destroy_custom_emoji: Delete Custom Emoji
+        destroy_domain_allow: Delete Domain Allow
+        destroy_domain_block: Delete Domain Block
+        destroy_email_domain_block: Delete e-mail domain block
+        destroy_status: Delete Status
+        disable_2fa_user: Disable 2FA
+        disable_custom_emoji: Disable Custom Emoji
+        disable_user: Disable User
+        enable_custom_emoji: Enable Custom Emoji
+        enable_user: Enable User
+        memorialize_account: Memorialize Account
+        promote_user: Promote User
+        remove_avatar_user: Remove Avatar
+        reopen_report: Reopen Report
+        reset_password_user: Reset Password
+        resolve_report: Resolve Report
+        silence_account: Silence Account
+        suspend_account: Suspend Account
+        unassigned_report: Unassign Report
+        unsilence_account: Unsilence Account
+        unsuspend_account: Unsuspend Account
+        update_announcement: Update Announcement
+        update_custom_emoji: Update Custom Emoji
+        update_status: Update Status
       actions:
         assigned_to_self_report: "%{name} assigned report %{target} to themselves"
         change_email_user: "%{name} changed the e-mail address of user %{target}"
@@ -231,6 +272,9 @@ en-OU:
         update_custom_emoji: "%{name} updated emoji %{target}"
         update_status: "%{name} updated status by %{target}"
       deleted_status: "(deleted status)"
+      empty: No logs found.
+      filter_by_action: Filter by action
+      filter_by_user: Filter by user
       title: Audit log
     announcements:
       destroyed_msg: Announcement successfully deleted!
@@ -271,6 +315,7 @@ en-OU:
       listed: Listed
       new:
         title: Add new custom emoji
+      not_permitted: You are not permitted to perform this action
       overwrite: Overwrite
       shortcode: Shortcode
       shortcode_hint: At least 2 characters, only alphanumeric characters and underscores
@@ -361,6 +406,7 @@ en-OU:
       destroyed_msg: Successfully deleted e-mail domain from blacklist
       domain: Domain
       empty: No e-mail domains currently blacklisted.
+      from_html: from %{domain}
       new:
         create: Add domain
         title: New e-mail blacklist entry
@@ -549,6 +595,9 @@ en-OU:
       trends:
         desc_html: Publicly display previously reviewed hashtags that are currently trending
         title: Trending hashtags
+    site_uploads:
+      delete: Delete uploaded file
+      destroyed_msg: Site upload successfully deleted!
     statuses:
       back_to_account: Back to account page
       batch:
@@ -599,6 +648,7 @@ en-OU:
       delete: Delete
       edit: Edit
       edit_preset: Edit warning preset
+      empty: Empty
       title: Manage warning presets
   admin_mailer:
     new_pending_account:
@@ -615,6 +665,7 @@ en-OU:
     add_new: Create alias
     created_msg: Successfully created a new alias. You can now initiate the move from the old account.
     deleted_msg: Successfully remove the alias. Moving from that account to this one will no longer be possible.
+    empty: You have no aliases.
     hint_html: If you want to move from another account to this one, here you can create an alias, which is required before you can proceed with moving followers from the old account to this one. This action by itself is <strong>harmless and reversible</strong>. <strong>The account migration is initiated from the old account</strong>.
     remove: Unlink alias
   appearance:
@@ -686,6 +737,7 @@ en-OU:
     trouble_logging_in: Difficulty logging in?
   authorize_follow:
     already_following: You still follow this account
+    already_requested: You have already sent a follow request to that account
     error: Sorry, this account was not found
     follow: Follow
     follow_request: 'Will find out of your asking to follow:'
@@ -700,6 +752,10 @@ en-OU:
     hint_html: "<strong>Tip:</strong> We won't ask you for your password again for the next hour."
     invalid_password: Invalid password
     prompt: Confirm password to continue
+  crypto:
+    errors:
+      invalid_key: is not a valid Ed25519 or Curve25519 key
+      invalid_signature: is not a valid Ed25519 signature
   date:
     abbr_day_names:
     - Sun
@@ -890,6 +946,8 @@ en-OU:
     inactive: Dormant
     publicize_checkbox: 'And toot this:'
     publicize_toot: 'This is proof! I am %{username} on %{service}: %{url}'
+    remove: Remove proof from account
+    removed: Successfully removed proof from account
     status: Validation status
     view_proof: Look at proof
   imports:
@@ -935,6 +993,7 @@ en-OU:
   media_attachments:
     validations:
       images_and_video: Cannot attach a vid to a status that contains photos
+      not_ready: Cannot attach files that have not finished processing. Try again in a moment!
       too_many: You may only attach up to 4 things
   migrations:
     acct: username@domain of account migrating to
@@ -957,6 +1016,7 @@ en-OU:
     past_migrations: Past migrations
     proceed: Save
     proceed_with_move: Move followers
+    redirected_msg: Your account is now redirecting to %{acct}.
     redirecting_to: Your account is redirecting to %{acct}.
     set_redirect: Set redirect
     updated_msg: Your account migration setting successfully updated!
@@ -971,6 +1031,10 @@ en-OU:
       redirect: Your current account's profile will be updated with a redirect notice and be excluded from searches
   moderation:
     title: Moderation
+  move_handler:
+    carry_blocks_over_text: This user moved from %{acct}, which you had blocked.
+    carry_mutes_over_text: This user moved from %{acct}, which you had muted.
+    copy_account_note_text: 'This user moved from %{acct}, here were your previous notes about them:'
   notification_mailer:
     digest:
       action: Look at all notifications
@@ -1157,6 +1221,9 @@ en-OU:
     spam_detected: This is an automated report. Spam has been detected.
   statuses:
     attached:
+      audio:
+        one: "%{count} audio"
+        other: "%{count} audio"
       description: 'Attaching ok: %{attached}'
       image:
         one: "%{count} pic"
@@ -1169,6 +1236,8 @@ en-OU:
     disallowed_hashtags:
       one: 'contains an ungood hashtag: %{tags}'
       other: 'contains ungood hashtags: %{tags}'
+    errors:
+      in_reply_not_found: The status you are trying to reply to does not appear to exist.
     language_detection: Automatically detect language
     local_only: Local-only
     open_in_web: Go to http location
@@ -1191,6 +1260,7 @@ en-OU:
     sign_in_to_participate: Sign in to chat along
     title: '%{name}: "%{quote}"'
     visibilities:
+      direct: Direct
       private: Accounts following-only
       private_long: Only show to accounts who follow you
       public: Public
@@ -1302,6 +1372,12 @@ en-OU:
       explanation: You requested a full backup of your Mastodon account. It's now ready for download!
       subject: Your archive is ready for download
       title: Archive takeout
+    sign_in_token:
+      details: 'Here are details of the attempt:'
+      explanation: 'We detected an attempt to sign in to your account from an unrecognized IP address. If this is you, please enter the security code below on the sign in challenge page:'
+      further_actions: 'If this wasn''t you, please change your password and enable two-factor authentication on your account. You can do so here:'
+      subject: Please confirm attempted sign in
+      title: Sign in attempt
     warning:
       explanation:
         disable: While your account is frozen, your account data remains intact, but you cannot perform any actions until it is unlocked.
@@ -1339,11 +1415,14 @@ en-OU:
       title: Oulipo says hi to you, %{name}!
   users:
     follow_limit_reached: You cannot follow more than %{limit} people
+    generic_access_help_html: Trouble accessing your account? You may get in touch with %{email} for assistance
     invalid_email: That mail is invalid
     invalid_otp_token: Invalid two-factor digits
+    invalid_sign_in_token: Invalid security code
     otp_lost_help_html: If you lost both, you may mail %{email}
     seamless_external_login: You are logged in via an external service, so password and e-mail settings are not available.
     signed_in_as: 'Posting as:'
+    suspicious_sign_in_confirmation: You appear to not have logged in from this device before, and you haven't logged in for a while, so we're sending a security code to your e-mail address to confirm that it's you.
   verification:
     explanation_html: 'You can <strong>verify yourself as the owner of the links in your profile metadata</strong>. For that, the linked website must contain a link back to your Mastodon profile. The link back <strong>must</strong> have a <code>rel="me"</code> attribute. The text content of the link does not matter. Here is an example:'
     verification: Verification
