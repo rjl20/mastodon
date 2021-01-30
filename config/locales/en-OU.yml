@@ -724,7 +724,7 @@ en-OU:
     remove: Unlink alias
   appearance:
     advanced_web_interface: Multi-Column UI
-    advanced_web_interface_hint: You might know this UI from past visits. It has many coumns you can show all sorts of information in, not just a big column in which you can pick what you want to show.
+    advanced_web_interface_hint: You might know this UI from past visits. It has many columns you can show all sorts of information in, not just a big column in which you can pick what you want to show.
     animations_and_accessibility: Animations and accessibility
     confirmation_dialogs: Confirmation dialogs
     discovery: Discovery
