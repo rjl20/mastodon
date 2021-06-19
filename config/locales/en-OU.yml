@@ -1061,39 +1061,39 @@ en-OU:
       not_ready: Cannot attach files that have not finished processing. Try again in a moment!
       too_many: You may only attach up to 4 things
   migrations:
-    acct: username@domain of account migrating to
-    cancel: Cancel redirect
-    cancel_explanation: Cancelling the redirect will re-activate your current account, but will not bring back followers that have been moved to that account.
-    cancelled_msg: Successfully cancelled the redirect.
-    currently_redirecting: 'Your profile is set to redirect to:'
+    acct: account@domain of account migrating to
+    cancel: Stop pointing away
+    cancel_explanation: Stopping this will turn your account back on, but it will not bring back folks who don't follow you at this account.
+    cancelled_msg: Okay, your account isn't pointing away now.
+    currently_redirecting: 'Your bio is pointing to:'
     errors:
-      already_moved: is the same account you have already moved to
-      missing_also_known_as: is not back-referencing this account
-      move_to_self: cannot be current account
-      not_found: could not be found
-      on_cooldown: You are on cooldown
-    followers_count: Followers at time of move
-    incoming_migrations: Moving from a different account
-    incoming_migrations_html: To move from another account to this one, first you need to <a href="%{path}">create an account alias</a>.
-    moved_msg: Your account is now redirecting to %{acct} and your followers are being moved over.
-    not_redirecting: Your account is not redirecting to any other account currently.
-    on_cooldown: You have recently migrated your account. This function will become available again in %{count} days.
+      already_moved: is what your account is pointing at now
+      missing_also_known_as: is not linking back to this account
+      move_to_self: cannot point back to this account
+      not_found: was not found
+      on_cooldown: You must wait for a bit
+    followers_count: Folks following prior to pointing away
+    incoming_migrations: Moving from an outward account
+    incoming_migrations_html: To point an account to this account, first you must <a href="%{path}">turn on an account alias</a>.
+    moved_msg: Your account is now pointing to %{acct} and folks who follow you will start moving to it, too.
+    not_redirecting: Your account is not pointing away right now.
+    on_cooldown: You just did a migration on your account not long ago. This function will show up again in %{count} days.
     past_migrations: Past migrations
-    proceed: Save
-    proceed_with_move: Move followers
-    redirected_msg: Your account is now redirecting to %{acct}.
-    redirecting_to: Your account is redirecting to %{acct}.
-    set_redirect: Set redirect
-    updated_msg: Your account migration setting successfully updated!
+    proceed: Do it
+    proceed_with_move: Point folks now
+    redirected_msg: Your account is now pointing at %{acct}.
+    redirecting_to: Your account is pointing to %{acct}.
+    set_redirect: Start pointing away
+    updated_msg: Your account migration modification took!
     warning:
-      backreference_required: The new account must first be configured to back-reference this one
-      before: 'Before proceeding, please read these notes carefully:'
-      cooldown: After moving there is a cooldown period during which you will not be able to move again
-      disabled_account: Your current account will not be fully usable afterwards. However, you will have access to data export as well as re-activation.
-      followers: This action will move all followers from the current account to the new account
-      only_redirect_html: Alternatively, you can <a href="%{path}">only put up a redirect on your profile</a>.
-      other_data: No other data will be moved automatically
-      redirect: Your current account's profile will be updated with a redirect notice and be excluded from searches
+      backreference_required: That account you want to point to must first link back to this account
+      before: 'Don't go forward without looking at this studiously:'
+      cooldown: As soon as you point your account away, a cooldown clock will start, during which you can't do it again
+      disabled_account: Your old account will not fully work. But, you can still look at your data, or turn your account back on.
+      followers: This action will point all folks who follow you away from your old account
+      only_redirect_html: Or, if you want, you can <a href="%{path}">only show a link on your bio</a>.
+      other_data: Not much data will show up on that account which you point to
+      redirect: Your old account's bio will point away from your old account, and may not show up if folks look for it
   moderation:
     title: Moderation
   move_handler:
