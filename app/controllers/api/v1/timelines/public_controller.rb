@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
 class Api::V1::Timelines::PublicController < Api::BaseController
+  before_action -> { authorize_if_got_token! :read, :'read:statuses' }
   before_action :require_user!, only: [:show], if: :require_auth?
   after_action :insert_pagination_headers, unless: -> { @statuses.empty? }
 
   def show
+    cache_if_unauthenticated!
     @statuses = load_statuses
     render json: @statuses, each_serializer: REST::StatusSerializer, relationships: StatusRelationshipsPresenter.new(@statuses, current_user&.account_id)
   end

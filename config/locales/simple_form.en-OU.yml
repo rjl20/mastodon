@@ -2,6 +2,14 @@
 en-OU:
   simple_form:
     hints:
+      account:
+        discoverable: Your public posts and profile may be featured or recommended in various areas of Mastodon and your profile may be suggested to other users.
+        display_name: Your full name or your fun name.
+        fields: Your homepage, pronouns, age, anything you want.
+        indexable: Your public posts may appear in search results on Mastodon. People who have interacted with your posts may be able to search them regardless.
+        note: 'You can @mention other people or #hashtags.'
+        show_collections: People will be able to browse through your follows and followers. People that you follow will see that you follow them regardless.
+        unlocked: People will be able to follow you without requesting approval. Uncheck if you want to review follow requests and chose whether to accept or reject new followers.
       account_alias:
         acct: Specify the username@domain of the account you want to move from
       account_migration:
@@ -65,7 +73,7 @@ en-OU:
         setting_theme: This controls how Mastodon looks if you log in.
         setting_use_blurhash: Gradients are based on the colors of the hidden visuals but obfuscate any details
         setting_use_pending_items: Hide timeline updates behind a click instead of automatically scrolling the feed
-        username: Your username will be unique on %{domain}
+        username: You can use letters, numbers, and underscores
         whole_word: When the keyword or phrase is alphanumeric only, it will only be applied if it matches the whole word
       domain_allow:
         domain: This domain will be able to fetch data from this server and incoming data from it will be processed and stored
@@ -80,6 +88,7 @@ en-OU:
           hide: Completely hide the filtered content, behaving as if it did not exist
           warn: Hide the filtered content behind a warning mentioning the filter's title
       form_admin_settings:
+        activity_api_enabled: Counts of locally published posts, active users, and new registrations in weekly buckets
         backups_retention_period: Keep generated user archives for the specified number of days.
         bootstrap_timeline_accounts: These accounts will be pinned to the top of new users' follow recommendations.
         closed_registrations_message: Displayed when sign-ups are closed
@@ -87,6 +96,7 @@ en-OU:
         custom_css: You can apply custom styles on the web version of Mastodon.
         mascot: Overrides the illustration in the advanced web interface.
         media_cache_retention_period: Downloaded media files will be deleted after the specified number of days when set to a positive value, and re-downloaded on demand.
+        peers_api_enabled: A list of domain names this server has encountered in the fediverse. No data is included here about whether you federate with a given server, just that your server knows about it. This is used by services that collect statistics on federation in a general sense.
         profile_directory: The profile directory lists all users who have opted-in to be discoverable.
         require_invite_text: When sign-ups require manual approval, make the “Why do you want to join?” text input mandatory rather than optional
         site_contact_email: How people can reach you for legal or support inquiries.
@@ -95,11 +105,13 @@ en-OU:
         site_short_description: A short description to help uniquely identify your server. Who is running it, who is it for?
         site_terms: Use your own privacy policy or leave blank to use the default. Can be structured with Markdown syntax.
         site_title: How people may refer to your server besides its domain name.
+        status_page_url: URL of a page where people can see the status of this server during an outage
         theme: Theme that logged out visitors and new users see.
         thumbnail: A roughly 2:1 image displayed alongside your server information.
         timeline_preview: Logged out visitors will be able to browse the most recent public posts available on the server.
         trendable_by_default: Skip manual review of trending content. Individual items can still be removed from trends after the fact.
         trends: Trends show which posts, hashtags and news stories are gaining traction on your server.
+        trends_as_landing_page: Show trending content to logged-out users and visitors instead of a description of this server. Requires trends to be enabled.
       form_challenge:
         current_password: You are entering a secure area
       imports:
@@ -120,6 +132,9 @@ en-OU:
       sessions:
         otp: 'Put in two-factor digits from an app or pick from your backup digits:'
         webauthn: If it's an USB key be sure to insert it and, if necessary, tap it.
+      settings:
+        indexable: Your profile page may appear in search results on Google, Bing, and others.
+        show_application: You will always be able to see which app published your post regardless.
       tag:
         name: You can only change the casing of the letters, for example, to make it more readable
       user:
@@ -134,12 +149,17 @@ en-OU:
         position: Higher role decides conflict resolution in certain situations. Certain actions can only be performed on roles with a lower priority
       webhook:
         events: Select events to send
+        template: Compose your own JSON payload using variable interpolation. Leave blank for default JSON.
         url: Where events will be sent to
     labels:
       account:
+        discoverable: Feature profile and posts in discovery algorithms
         fields:
           name: Tag
           value: Data
+        indexable: Include public posts in search results
+        show_collections: Show follows and followers on profile
+        unlocked: Automatically accept new followers
       account_alias:
         acct: Handle of the old account
       account_migration:
@@ -239,6 +259,7 @@ en-OU:
           hide: Hide completely
           warn: Hide with a warning
       form_admin_settings:
+        activity_api_enabled: Publish aggregate statistics about user activity in the API
         backups_retention_period: User archive retention period
         bootstrap_timeline_accounts: Always recommend these accounts to new users
         closed_registrations_message: Custom message when sign-ups are not available
@@ -246,6 +267,7 @@ en-OU:
         custom_css: Custom CSS
         mascot: Custom mascot (legacy)
         media_cache_retention_period: Media cache retention period
+        peers_api_enabled: Publish list of discovered servers in the API
         profile_directory: Enable profile directory
         registrations_mode: Who can sign-up
         require_invite_text: Require a reason to join
@@ -257,11 +279,13 @@ en-OU:
         site_short_description: Server description
         site_terms: Privacy Policy
         site_title: Server name
+        status_page_url: Status page URL
         theme: Default theme
         thumbnail: Server thumbnail
         timeline_preview: Allow unauthenticated access to public timelines
         trendable_by_default: Allow trends without prior review
         trends: Enable trends
+        trends_as_landing_page: Use trends as the landing page
       interactions:
         must_be_follower: Block notifications from folks not following you
         must_be_following: Block notifications from folks you don't follow
@@ -288,9 +312,18 @@ en-OU:
         pending_account: Send e-mail when a new account needs review
         reblog: Mail if anybody boosts your status
         report: Send e-mail when a new report is submitted
+        software_updates:
+          all: Notify on all updates
+          critical: Notify on critical updates only
+          label: A new Mastodon version is available
+          none: Never notify of updates (not recommended)
+          patch: Notify on bugfix updates
         trending_tag: An unreviewed hashtag is trending
       rule:
         text: Rule
+      settings:
+        indexable: Include profile page in search engines
+        show_application: Display from which app you sent a post
       tag:
         listable: Allow this hashtag to appear in searches and on the profile directory
         name: Hashtag
@@ -298,6 +331,7 @@ en-OU:
         usable: Allow toots to use this hashtag
       user:
         role: Role
+        time_zone: Time zone
       user_role:
         color: Badge color
         highlighted: Display role as badge on user profiles
@@ -306,9 +340,11 @@ en-OU:
         position: Priority
       webhook:
         events: Enabled events
+        template: Payload template
         url: Endpoint URL
     'no': 'No'
     not_recommended: Not recommended
+    overridden: Overridden
     recommended: A good option
     required:
       mark: "*"

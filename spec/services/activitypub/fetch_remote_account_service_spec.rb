@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe ActivityPub::FetchRemoteAccountService, type: :service do
-  subject { ActivityPub::FetchRemoteAccountService.new }
+  subject { described_class.new }
 
   let!(:actor) do
     {
@@ -16,7 +18,7 @@ RSpec.describe ActivityPub::FetchRemoteAccountService, type: :service do
   end
 
   describe '#call' do
-    let(:account) { subject.call('https://example.com/alice', id: true) }
+    let(:account) { subject.call('https://example.com/alice') }
 
     shared_examples 'sets profile data' do
       it 'returns an account' do
@@ -42,7 +44,7 @@ RSpec.describe ActivityPub::FetchRemoteAccountService, type: :service do
       before do
         actor[:inbox] = nil
 
-        stub_request(:get, 'https://example.com/alice').to_return(body: Oj.dump(actor))
+        stub_request(:get, 'https://example.com/alice').to_return(body: Oj.dump(actor), headers: { 'Content-Type': 'application/activity+json' })
         stub_request(:get, 'https://example.com/.well-known/webfinger?resource=acct:alice@example.com').to_return(body: Oj.dump(webfinger), headers: { 'Content-Type': 'application/jrd+json' })
       end
 
@@ -65,7 +67,7 @@ RSpec.describe ActivityPub::FetchRemoteAccountService, type: :service do
       let!(:webfinger) { { subject: 'acct:alice@example.com', links: [{ rel: 'self', href: 'https://example.com/alice' }] } }
 
       before do
-        stub_request(:get, 'https://example.com/alice').to_return(body: Oj.dump(actor))
+        stub_request(:get, 'https://example.com/alice').to_return(body: Oj.dump(actor), headers: { 'Content-Type': 'application/activity+json' })
         stub_request(:get, 'https://example.com/.well-known/webfinger?resource=acct:alice@example.com').to_return(body: Oj.dump(webfinger), headers: { 'Content-Type': 'application/jrd+json' })
       end
 
@@ -91,7 +93,7 @@ RSpec.describe ActivityPub::FetchRemoteAccountService, type: :service do
       let!(:webfinger) { { subject: 'acct:alice@iscool.af', links: [{ rel: 'self', href: 'https://example.com/alice' }] } }
 
       before do
-        stub_request(:get, 'https://example.com/alice').to_return(body: Oj.dump(actor))
+        stub_request(:get, 'https://example.com/alice').to_return(body: Oj.dump(actor), headers: { 'Content-Type': 'application/activity+json' })
         stub_request(:get, 'https://example.com/.well-known/webfinger?resource=acct:alice@example.com').to_return(body: Oj.dump(webfinger), headers: { 'Content-Type': 'application/jrd+json' })
         stub_request(:get, 'https://iscool.af/.well-known/webfinger?resource=acct:alice@iscool.af').to_return(body: Oj.dump(webfinger), headers: { 'Content-Type': 'application/jrd+json' })
       end
@@ -123,7 +125,7 @@ RSpec.describe ActivityPub::FetchRemoteAccountService, type: :service do
       let!(:webfinger) { { subject: 'acct:alice@example.com', links: [{ rel: 'self', href: 'https://example.com/bob' }] } }
 
       before do
-        stub_request(:get, 'https://example.com/alice').to_return(body: Oj.dump(actor))
+        stub_request(:get, 'https://example.com/alice').to_return(body: Oj.dump(actor), headers: { 'Content-Type': 'application/activity+json' })
         stub_request(:get, 'https://example.com/.well-known/webfinger?resource=acct:alice@example.com').to_return(body: Oj.dump(webfinger), headers: { 'Content-Type': 'application/jrd+json' })
       end
 
@@ -146,7 +148,7 @@ RSpec.describe ActivityPub::FetchRemoteAccountService, type: :service do
       let!(:webfinger) { { subject: 'acct:alice@iscool.af', links: [{ rel: 'self', href: 'https://example.com/bob' }] } }
 
       before do
-        stub_request(:get, 'https://example.com/alice').to_return(body: Oj.dump(actor))
+        stub_request(:get, 'https://example.com/alice').to_return(body: Oj.dump(actor), headers: { 'Content-Type': 'application/activity+json' })
         stub_request(:get, 'https://example.com/.well-known/webfinger?resource=acct:alice@example.com').to_return(body: Oj.dump(webfinger), headers: { 'Content-Type': 'application/jrd+json' })
         stub_request(:get, 'https://iscool.af/.well-known/webfinger?resource=acct:alice@iscool.af').to_return(body: Oj.dump(webfinger), headers: { 'Content-Type': 'application/jrd+json' })
       end
